@@ -1,0 +1,18 @@
+PODS:
+  - HFSwipeView (1.2.0):
+    - PureLayout
+    - TinyLog
+  - PureLayout (3.0.2)
+  - TinyLog (1.0.1)
+
+DEPENDENCIES:
+  - HFSwipeView (~> 1.2.0)
+
+SPEC CHECKSUMS:
+  HFSwipeView: f14aeabd91b75403681e7ac6add5a614eb1fa8f8
+  PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
+  TinyLog: 6c3ecbc348d10dc242ebb506f684fc9ae6aff533
+
+PODFILE CHECKSUM: bcdd33b750365a13c38d11f177587b572696eb3f
+
+COCOAPODS: 1.2.0

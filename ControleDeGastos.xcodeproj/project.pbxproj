@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD922B50E0F5A2FE8B9EB08D /* Pods_ControleDeGastos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D09BAEC67FBF313537F722 /* Pods_ControleDeGastos.framework */; };
 		B11077791E8D2CC300D5EF56 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11077781E8D2CC300D5EF56 /* TableViewController.swift */; };
 		B1A042D01E8BF58F00E7BF27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A042CF1E8BF58F00E7BF27 /* AppDelegate.swift */; };
 		B1A042D21E8BF58F00E7BF27 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A042D11E8BF58F00E7BF27 /* FirstViewController.swift */; };
@@ -19,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		23A35EC3408C04755D45D576 /* Pods-ControleDeGastos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ControleDeGastos.release.xcconfig"; path = "Pods/Target Support Files/Pods-ControleDeGastos/Pods-ControleDeGastos.release.xcconfig"; sourceTree = "<group>"; };
+		761013881E8D727000947005 /* ControleDeGastos-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ControleDeGastos-Bridging-Header.h"; sourceTree = "<group>"; };
+		80BBE36D84DF6ABD9FDE49BE /* Pods-ControleDeGastos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ControleDeGastos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ControleDeGastos/Pods-ControleDeGastos.debug.xcconfig"; sourceTree = "<group>"; };
+		A2D09BAEC67FBF313537F722 /* Pods_ControleDeGastos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ControleDeGastos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B11077781E8D2CC300D5EF56 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		B1A042CC1E8BF58F00E7BF27 /* ControleDeGastos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ControleDeGastos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1A042CF1E8BF58F00E7BF27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -37,17 +42,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD922B50E0F5A2FE8B9EB08D /* Pods_ControleDeGastos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		069BEB79DA2615E8CE3ACA1B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A2D09BAEC67FBF313537F722 /* Pods_ControleDeGastos.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B1A042C31E8BF58F00E7BF27 = {
 			isa = PBXGroup;
 			children = (
 				B1A042CE1E8BF58F00E7BF27 /* ControleDeGastos */,
 				B1A042CD1E8BF58F00E7BF27 /* Products */,
+				BD0DC2474EAF7BEADF4E55BA /* Pods */,
+				069BEB79DA2615E8CE3ACA1B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,8 +88,18 @@
 				B1A042DD1E8BF58F00E7BF27 /* Info.plist */,
 				B1A042ED1E8C049600E7BF27 /* ItemCell.swift */,
 				B1A042EF1E8C04A400E7BF27 /* Item.swift */,
+				761013881E8D727000947005 /* ControleDeGastos-Bridging-Header.h */,
 			);
 			path = ControleDeGastos;
+			sourceTree = "<group>";
+		};
+		BD0DC2474EAF7BEADF4E55BA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				80BBE36D84DF6ABD9FDE49BE /* Pods-ControleDeGastos.debug.xcconfig */,
+				23A35EC3408C04755D45D576 /* Pods-ControleDeGastos.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,9 +109,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B1A042E01E8BF58F00E7BF27 /* Build configuration list for PBXNativeTarget "ControleDeGastos" */;
 			buildPhases = (
+				353B41D9BB86321408EEBBBB /* [CP] Check Pods Manifest.lock */,
 				B1A042C81E8BF58F00E7BF27 /* Sources */,
 				B1A042C91E8BF58F00E7BF27 /* Frameworks */,
 				B1A042CA1E8BF58F00E7BF27 /* Resources */,
+				2F7C7D6095D2899D8FC897F0 /* [CP] Embed Pods Frameworks */,
+				000F56C21A72B2B8E8633C51 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -109,6 +138,7 @@
 					B1A042CB1E8BF58F00E7BF27 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 32P3VH37WD;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -143,6 +173,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		000F56C21A72B2B8E8633C51 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ControleDeGastos/Pods-ControleDeGastos-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2F7C7D6095D2899D8FC897F0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ControleDeGastos/Pods-ControleDeGastos-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		353B41D9BB86321408EEBBBB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B1A042C81E8BF58F00E7BF27 /* Sources */ = {
@@ -273,26 +351,33 @@
 		};
 		B1A042E11E8BF58F00E7BF27 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80BBE36D84DF6ABD9FDE49BE /* Pods-ControleDeGastos.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 32P3VH37WD;
 				INFOPLIST_FILE = ControleDeGastos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.org.eldorado.bepid.ControleDeGastos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ControleDeGastos/ControleDeGastos-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		B1A042E21E8BF58F00E7BF27 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23A35EC3408C04755D45D576 /* Pods-ControleDeGastos.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 32P3VH37WD;
 				INFOPLIST_FILE = ControleDeGastos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.org.eldorado.bepid.ControleDeGastos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ControleDeGastos/ControleDeGastos-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

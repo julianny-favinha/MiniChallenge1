@@ -1,0 +1,967 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0264906A407C5EC88C921849D744CCE9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB3D1197F108653F22B3860157052424 /* Foundation.framework */; };
+		030421380231CB17209CF64BCC460AF2 /* TinyLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43B89791C33CA7039611DD18CDB8E0A2 /* TinyLog.framework */; };
+		08EE79ACD711FA9AC31FB97EF1E139B2 /* NSLayoutConstraint+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 54B449A17E1C730B00093950F16315B6 /* NSLayoutConstraint+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		21AA6C6CFEED5D0636D247257441BFA4 /* NSArray+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 70BC5B4D2B05F1BD6D91CDE35FFB6DEF /* NSArray+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30884A9362D52993A1391D66B4F79B44 /* Pods-ControleDeGastos-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF7B479C7B818AFE5CF323B064FA339 /* Pods-ControleDeGastos-dummy.m */; };
+		4B2EB09AE7457C553D7B14C496321684 /* TinyLog-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B03D6AD862036F7E1B2AAF539D2B55 /* TinyLog-dummy.m */; };
+		4BE19C17A039461EF0949306A16F2AC5 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A991C87A00EF26CAC944A4E24568C46F /* NSLayoutConstraint+PureLayout.m */; };
+		5FA4D924E551B8034514AC1059319F4C /* HFSwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435F616738E0AE84D57D2F65AED266E3 /* HFSwipeView.swift */; };
+		66B50CA3FF7769808BD8D21E3EEDE3A2 /* PureLayoutDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = C0CFEA96D35049C9F90FB4AD37C17E43 /* PureLayoutDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		726774EE15651C2ED7DC32646543C76D /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D00521AB80BC67259E44F45BF7CDFE /* ALView+PureLayout.m */; };
+		732627639E69BEEF1A4DE115E13E7519 /* HFSwipeView+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3325D5FC4D29442702A122D97E257B12 /* HFSwipeView+Animation.swift */; };
+		794C13E67F8FD786628909F737509F37 /* PureLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D98ED338D9F46739168C00FD6D00049 /* PureLayout.framework */; };
+		7EB2C6063E5EAE113EBDC2D61706173F /* HFSwipeView+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02EC9D5375719A6D1E672D8910C6AC3 /* HFSwipeView+Utility.swift */; };
+		84420BDEDBB4D9F5EAF2DD81FA74BB30 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D3473F5F854AE11C778A9E1E07BA1195 /* NSArray+PureLayout.m */; };
+		884CB9C5C53B521DD751B79232F83F78 /* HFSwipeView+Offset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EAA79D6297DE26536C04269D30D84E /* HFSwipeView+Offset.swift */; };
+		8CC43B17BFB7577B7C5B1876A50370FE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB3D1197F108653F22B3860157052424 /* Foundation.framework */; };
+		93C36C6886CEECBD5D15EB8C5FD1A809 /* TinyLog-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E9C287FCFA6605A7CA5185C8E9ABFF72 /* TinyLog-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9654D00B4D421A7F1F04E1354630FC15 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB3D1197F108653F22B3860157052424 /* Foundation.framework */; };
+		9851B82FEE0D5399A1010CA0E7CB99C1 /* Pods-ControleDeGastos-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 32E0E73B353F495225C314A378243337 /* Pods-ControleDeGastos-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A41C037A8731215540AD0546179BB540 /* PureLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FEDCD7F48673D5C18F44F43343CB30D /* PureLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A43ACF748EB4D094F7C83A5CCA34A3D0 /* PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = D09D3ACC047715C5FEF0A92C53B9EF49 /* PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEFFF378832609785963CF7D3CC885A6 /* ALView+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 849920107A43410D338C3BEDFB39FD7A /* ALView+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AFAA741D452A4E8EF3977FF47B6E5ADA /* HFSwipeView+Index.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AC45E2173B733BCDF2FB41BD6EB635 /* HFSwipeView+Index.swift */; };
+		B4F0B132A85C75F7C478B3D3C8D42480 /* PureLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A8E3467488015F5F105B2C2998E5DD /* PureLayout-dummy.m */; };
+		CA95F47546AB9DC688974E9E6EC9EC53 /* HFSwipeView+AutoSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4756CE82A3D415C97E67F335EA22CF9F /* HFSwipeView+AutoSlide.swift */; };
+		CFB39C83C41C4246B43522A94AEC65D7 /* HFSwipeView+Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE70A0C4BA6A59B0792EAB8F8C8056BA /* HFSwipeView+Page.swift */; };
+		CFD99960BA38A76CD5EB80526DE31E3D /* TinyLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638786B2FC2C56B8BC95591D7160E145 /* TinyLog.swift */; };
+		E2073CC73A9E3DC035E2093E40D90B09 /* HFSwipeView+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8B5BBB048ECAC99BDBFF01B6548B03 /* HFSwipeView+Delegate.swift */; };
+		E39E77FBE1350085092CC0C2229F3705 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB3D1197F108653F22B3860157052424 /* Foundation.framework */; };
+		E907BD21ECB9C4F8601BD23D0381EB7B /* HFSwipeView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 25771889902EF45881849EB541E104D4 /* HFSwipeView-dummy.m */; };
+		F6DA921A453285F9B3403C757134B733 /* PureLayout+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = D629C8DA9154D5EF5A4D7639DC971598 /* PureLayout+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA84C9752E09E96F2C2E97AEF8759A4F /* HFSwipeView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A8FDA613EF70D1EC6EFC38BFEE3E2BB /* HFSwipeView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0B2F84DF996E1533EAB080969C964DEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E609275EB8EF6AB4CFBAED04D4B6315F;
+			remoteInfo = TinyLog;
+		};
+		1AD0F682FDD439B791AD8D1DD63264A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3720406451EDC459067BCFC46DC2D2DB;
+			remoteInfo = PureLayout;
+		};
+		862998DEA783BECC1EC41933AAE04C60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E609275EB8EF6AB4CFBAED04D4B6315F;
+			remoteInfo = TinyLog;
+		};
+		9319E4E697E43F8692680854CA69FB3B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D6DCF0D49C0ED356F6E26B5963D1E71D;
+			remoteInfo = HFSwipeView;
+		};
+		E2ECA66025B50A8135F6B34FD560082D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3720406451EDC459067BCFC46DC2D2DB;
+			remoteInfo = PureLayout;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0340D503795C22EB866C3B661B91219F /* Pods_ControleDeGastos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ControleDeGastos.framework; path = "Pods-ControleDeGastos.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1215740A20C3B38FAD37492E253CCE72 /* HFSwipeView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = HFSwipeView.modulemap; sourceTree = "<group>"; };
+		12E8F19832CC829977F8A37B8B3E1174 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D1EF77E915C8C3918E4BC3FAFC4BD51 /* Pods-ControleDeGastos.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ControleDeGastos.modulemap"; sourceTree = "<group>"; };
+		1DB86A3F24380A939DB958CA6B755A8C /* Pods-ControleDeGastos-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ControleDeGastos-resources.sh"; sourceTree = "<group>"; };
+		25771889902EF45881849EB541E104D4 /* HFSwipeView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HFSwipeView-dummy.m"; sourceTree = "<group>"; };
+		258DB7A536486A3503EC0E8A42FDE512 /* Pods-ControleDeGastos-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ControleDeGastos-acknowledgements.markdown"; sourceTree = "<group>"; };
+		2FEDCD7F48673D5C18F44F43343CB30D /* PureLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PureLayout-umbrella.h"; sourceTree = "<group>"; };
+		32E0E73B353F495225C314A378243337 /* Pods-ControleDeGastos-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ControleDeGastos-umbrella.h"; sourceTree = "<group>"; };
+		3325D5FC4D29442702A122D97E257B12 /* HFSwipeView+Animation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "HFSwipeView+Animation.swift"; path = "HFSwipeView/Classes/HFSwipeView+Animation.swift"; sourceTree = "<group>"; };
+		33BA4E9821E955120079A4F9787225EB /* TinyLog.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TinyLog.xcconfig; sourceTree = "<group>"; };
+		36A8E3467488015F5F105B2C2998E5DD /* PureLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PureLayout-dummy.m"; sourceTree = "<group>"; };
+		41B03D6AD862036F7E1B2AAF539D2B55 /* TinyLog-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TinyLog-dummy.m"; sourceTree = "<group>"; };
+		435F616738E0AE84D57D2F65AED266E3 /* HFSwipeView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HFSwipeView.swift; path = HFSwipeView/Classes/HFSwipeView.swift; sourceTree = "<group>"; };
+		43B89791C33CA7039611DD18CDB8E0A2 /* TinyLog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TinyLog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4756CE82A3D415C97E67F335EA22CF9F /* HFSwipeView+AutoSlide.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "HFSwipeView+AutoSlide.swift"; path = "HFSwipeView/Classes/HFSwipeView+AutoSlide.swift"; sourceTree = "<group>"; };
+		4D98ED338D9F46739168C00FD6D00049 /* PureLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PureLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		53EAA79D6297DE26536C04269D30D84E /* HFSwipeView+Offset.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "HFSwipeView+Offset.swift"; path = "HFSwipeView/Classes/HFSwipeView+Offset.swift"; sourceTree = "<group>"; };
+		54B449A17E1C730B00093950F16315B6 /* NSLayoutConstraint+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+PureLayout.h"; path = "PureLayout/PureLayout/NSLayoutConstraint+PureLayout.h"; sourceTree = "<group>"; };
+		5A8FDA613EF70D1EC6EFC38BFEE3E2BB /* HFSwipeView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HFSwipeView-umbrella.h"; sourceTree = "<group>"; };
+		5DD32C013E86DEA36D916DC6DB7A2AA7 /* PureLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PureLayout.framework; path = PureLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		600239D06AEDE5362C420ED3EED6FB15 /* Pods-ControleDeGastos-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ControleDeGastos-acknowledgements.plist"; sourceTree = "<group>"; };
+		638786B2FC2C56B8BC95591D7160E145 /* TinyLog.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TinyLog.swift; path = TinyLog/Classes/TinyLog.swift; sourceTree = "<group>"; };
+		69D00521AB80BC67259E44F45BF7CDFE /* ALView+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ALView+PureLayout.m"; path = "PureLayout/PureLayout/ALView+PureLayout.m"; sourceTree = "<group>"; };
+		70A5A367DB5CE738447D760694119644 /* Pods-ControleDeGastos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ControleDeGastos.release.xcconfig"; sourceTree = "<group>"; };
+		70BC5B4D2B05F1BD6D91CDE35FFB6DEF /* NSArray+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+PureLayout.h"; path = "PureLayout/PureLayout/NSArray+PureLayout.h"; sourceTree = "<group>"; };
+		7FE748051E324C17E819BA6E6CCD4BCB /* TinyLog.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = TinyLog.modulemap; sourceTree = "<group>"; };
+		8214DF7C4A59DBD6191E05FAB3010AC5 /* Pods-ControleDeGastos-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ControleDeGastos-frameworks.sh"; sourceTree = "<group>"; };
+		849920107A43410D338C3BEDFB39FD7A /* ALView+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ALView+PureLayout.h"; path = "PureLayout/PureLayout/ALView+PureLayout.h"; sourceTree = "<group>"; };
+		879CDCD8A45373CFEBB69651542B45E7 /* PureLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = PureLayout.modulemap; sourceTree = "<group>"; };
+		9311227E9F94F21D6291DFEEA4E8099F /* PureLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PureLayout-prefix.pch"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A02EC9D5375719A6D1E672D8910C6AC3 /* HFSwipeView+Utility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "HFSwipeView+Utility.swift"; path = "HFSwipeView/Classes/HFSwipeView+Utility.swift"; sourceTree = "<group>"; };
+		A6AC45E2173B733BCDF2FB41BD6EB635 /* HFSwipeView+Index.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "HFSwipeView+Index.swift"; path = "HFSwipeView/Classes/HFSwipeView+Index.swift"; sourceTree = "<group>"; };
+		A991C87A00EF26CAC944A4E24568C46F /* NSLayoutConstraint+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+PureLayout.m"; path = "PureLayout/PureLayout/NSLayoutConstraint+PureLayout.m"; sourceTree = "<group>"; };
+		B5EEE0D25EAEB8FC6D7E9039375E047B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB3D1197F108653F22B3860157052424 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		C0CFEA96D35049C9F90FB4AD37C17E43 /* PureLayoutDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PureLayoutDefines.h; path = PureLayout/PureLayout/PureLayoutDefines.h; sourceTree = "<group>"; };
+		C4E9F03C97F9EB9A4DAFAFC7323070EB /* HFSwipeView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HFSwipeView-prefix.pch"; sourceTree = "<group>"; };
+		CE8FB04C9576D5F17C74DE53E2820A45 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D09D3ACC047715C5FEF0A92C53B9EF49 /* PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PureLayout.h; path = PureLayout/PureLayout/PureLayout.h; sourceTree = "<group>"; };
+		D3473F5F854AE11C778A9E1E07BA1195 /* NSArray+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+PureLayout.m"; path = "PureLayout/PureLayout/NSArray+PureLayout.m"; sourceTree = "<group>"; };
+		D629C8DA9154D5EF5A4D7639DC971598 /* PureLayout+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PureLayout+Internal.h"; path = "PureLayout/PureLayout/PureLayout+Internal.h"; sourceTree = "<group>"; };
+		D6BF95FBED097251426919C061725DA0 /* HFSwipeView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = HFSwipeView.framework; path = HFSwipeView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D73F55A5E9CCFAD7C059C6D726CE32E5 /* HFSwipeView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HFSwipeView.xcconfig; sourceTree = "<group>"; };
+		D89FC2DA0A1DBD0C39378C27F1FAB2A0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE70A0C4BA6A59B0792EAB8F8C8056BA /* HFSwipeView+Page.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "HFSwipeView+Page.swift"; path = "HFSwipeView/Classes/HFSwipeView+Page.swift"; sourceTree = "<group>"; };
+		E8F8BF74E1203CCEAB51F6ED681598CB /* TinyLog-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TinyLog-prefix.pch"; sourceTree = "<group>"; };
+		E9C287FCFA6605A7CA5185C8E9ABFF72 /* TinyLog-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TinyLog-umbrella.h"; sourceTree = "<group>"; };
+		EE8B5BBB048ECAC99BDBFF01B6548B03 /* HFSwipeView+Delegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "HFSwipeView+Delegate.swift"; path = "HFSwipeView/Classes/HFSwipeView+Delegate.swift"; sourceTree = "<group>"; };
+		F1B8737BBC7CF25AADB7117B4477298E /* TinyLog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TinyLog.framework; path = TinyLog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F56C063CC548D5541E574F27949296AB /* Pods-ControleDeGastos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ControleDeGastos.debug.xcconfig"; sourceTree = "<group>"; };
+		FBF7B479C7B818AFE5CF323B064FA339 /* Pods-ControleDeGastos-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ControleDeGastos-dummy.m"; sourceTree = "<group>"; };
+		FE042170F558F26A566488C795B48794 /* PureLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PureLayout.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4E1CEB69785103858B2505FB1C842FAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CC43B17BFB7577B7C5B1876A50370FE /* Foundation.framework in Frameworks */,
+				794C13E67F8FD786628909F737509F37 /* PureLayout.framework in Frameworks */,
+				030421380231CB17209CF64BCC460AF2 /* TinyLog.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52FE4AD7D6C1F8C9B530FCC5DC100E80 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0264906A407C5EC88C921849D744CCE9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		791F116B2058866B411C1D901B1A937D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E39E77FBE1350085092CC0C2229F3705 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA7936C0E6508083A9BC6DC3C63CDA6C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9654D00B4D421A7F1F04E1354630FC15 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1C06441700A9252ECB0826F75562DE67 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				12E8F19832CC829977F8A37B8B3E1174 /* Info.plist */,
+				879CDCD8A45373CFEBB69651542B45E7 /* PureLayout.modulemap */,
+				FE042170F558F26A566488C795B48794 /* PureLayout.xcconfig */,
+				36A8E3467488015F5F105B2C2998E5DD /* PureLayout-dummy.m */,
+				9311227E9F94F21D6291DFEEA4E8099F /* PureLayout-prefix.pch */,
+				2FEDCD7F48673D5C18F44F43343CB30D /* PureLayout-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PureLayout";
+			sourceTree = "<group>";
+		};
+		2AD86841B051961B9731512F05C7E4F5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D6BF95FBED097251426919C061725DA0 /* HFSwipeView.framework */,
+				0340D503795C22EB866C3B661B91219F /* Pods_ControleDeGastos.framework */,
+				5DD32C013E86DEA36D916DC6DB7A2AA7 /* PureLayout.framework */,
+				F1B8737BBC7CF25AADB7117B4477298E /* TinyLog.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2EED817781DF99AB76C9C95326CB675F /* TinyLog */ = {
+			isa = PBXGroup;
+			children = (
+				638786B2FC2C56B8BC95591D7160E145 /* TinyLog.swift */,
+				33D3C442FBD09E9C64386BA4BC6398B5 /* Support Files */,
+			);
+			name = TinyLog;
+			path = TinyLog;
+			sourceTree = "<group>";
+		};
+		33D3C442FBD09E9C64386BA4BC6398B5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D89FC2DA0A1DBD0C39378C27F1FAB2A0 /* Info.plist */,
+				7FE748051E324C17E819BA6E6CCD4BCB /* TinyLog.modulemap */,
+				33BA4E9821E955120079A4F9787225EB /* TinyLog.xcconfig */,
+				41B03D6AD862036F7E1B2AAF539D2B55 /* TinyLog-dummy.m */,
+				E8F8BF74E1203CCEAB51F6ED681598CB /* TinyLog-prefix.pch */,
+				E9C287FCFA6605A7CA5185C8E9ABFF72 /* TinyLog-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/TinyLog";
+			sourceTree = "<group>";
+		};
+		61878655624D6BAB8EFD438995DEB8AB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AF0671AC26690360B53BDBC5E5E7ED0B /* HFSwipeView */,
+				77488A03786503D062FD6A224A8EEF95 /* PureLayout */,
+				2EED817781DF99AB76C9C95326CB675F /* TinyLog */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		77488A03786503D062FD6A224A8EEF95 /* PureLayout */ = {
+			isa = PBXGroup;
+			children = (
+				849920107A43410D338C3BEDFB39FD7A /* ALView+PureLayout.h */,
+				69D00521AB80BC67259E44F45BF7CDFE /* ALView+PureLayout.m */,
+				70BC5B4D2B05F1BD6D91CDE35FFB6DEF /* NSArray+PureLayout.h */,
+				D3473F5F854AE11C778A9E1E07BA1195 /* NSArray+PureLayout.m */,
+				54B449A17E1C730B00093950F16315B6 /* NSLayoutConstraint+PureLayout.h */,
+				A991C87A00EF26CAC944A4E24568C46F /* NSLayoutConstraint+PureLayout.m */,
+				D09D3ACC047715C5FEF0A92C53B9EF49 /* PureLayout.h */,
+				D629C8DA9154D5EF5A4D7639DC971598 /* PureLayout+Internal.h */,
+				C0CFEA96D35049C9F90FB4AD37C17E43 /* PureLayoutDefines.h */,
+				1C06441700A9252ECB0826F75562DE67 /* Support Files */,
+			);
+			name = PureLayout;
+			path = PureLayout;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				90A17D96B1E89DB281F696C0BAA95D93 /* Frameworks */,
+				61878655624D6BAB8EFD438995DEB8AB /* Pods */,
+				2AD86841B051961B9731512F05C7E4F5 /* Products */,
+				827578DA9D2C20EB5A8F16DB1102D4CB /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		827578DA9D2C20EB5A8F16DB1102D4CB /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E8F2A1CB3ED492A2E313F1C6DCA9E61F /* Pods-ControleDeGastos */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		90A17D96B1E89DB281F696C0BAA95D93 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4D98ED338D9F46739168C00FD6D00049 /* PureLayout.framework */,
+				43B89791C33CA7039611DD18CDB8E0A2 /* TinyLog.framework */,
+				E1F8DA42FE1B2AE8E6884ED2651A5E3C /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AF0671AC26690360B53BDBC5E5E7ED0B /* HFSwipeView */ = {
+			isa = PBXGroup;
+			children = (
+				435F616738E0AE84D57D2F65AED266E3 /* HFSwipeView.swift */,
+				3325D5FC4D29442702A122D97E257B12 /* HFSwipeView+Animation.swift */,
+				4756CE82A3D415C97E67F335EA22CF9F /* HFSwipeView+AutoSlide.swift */,
+				EE8B5BBB048ECAC99BDBFF01B6548B03 /* HFSwipeView+Delegate.swift */,
+				A6AC45E2173B733BCDF2FB41BD6EB635 /* HFSwipeView+Index.swift */,
+				53EAA79D6297DE26536C04269D30D84E /* HFSwipeView+Offset.swift */,
+				DE70A0C4BA6A59B0792EAB8F8C8056BA /* HFSwipeView+Page.swift */,
+				A02EC9D5375719A6D1E672D8910C6AC3 /* HFSwipeView+Utility.swift */,
+				DDBEE6944869166D4AD16AE5693DF800 /* Support Files */,
+			);
+			name = HFSwipeView;
+			path = HFSwipeView;
+			sourceTree = "<group>";
+		};
+		DDBEE6944869166D4AD16AE5693DF800 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1215740A20C3B38FAD37492E253CCE72 /* HFSwipeView.modulemap */,
+				D73F55A5E9CCFAD7C059C6D726CE32E5 /* HFSwipeView.xcconfig */,
+				25771889902EF45881849EB541E104D4 /* HFSwipeView-dummy.m */,
+				C4E9F03C97F9EB9A4DAFAFC7323070EB /* HFSwipeView-prefix.pch */,
+				5A8FDA613EF70D1EC6EFC38BFEE3E2BB /* HFSwipeView-umbrella.h */,
+				B5EEE0D25EAEB8FC6D7E9039375E047B /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/HFSwipeView";
+			sourceTree = "<group>";
+		};
+		E1F8DA42FE1B2AE8E6884ED2651A5E3C /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				BB3D1197F108653F22B3860157052424 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		E8F2A1CB3ED492A2E313F1C6DCA9E61F /* Pods-ControleDeGastos */ = {
+			isa = PBXGroup;
+			children = (
+				CE8FB04C9576D5F17C74DE53E2820A45 /* Info.plist */,
+				1D1EF77E915C8C3918E4BC3FAFC4BD51 /* Pods-ControleDeGastos.modulemap */,
+				258DB7A536486A3503EC0E8A42FDE512 /* Pods-ControleDeGastos-acknowledgements.markdown */,
+				600239D06AEDE5362C420ED3EED6FB15 /* Pods-ControleDeGastos-acknowledgements.plist */,
+				FBF7B479C7B818AFE5CF323B064FA339 /* Pods-ControleDeGastos-dummy.m */,
+				8214DF7C4A59DBD6191E05FAB3010AC5 /* Pods-ControleDeGastos-frameworks.sh */,
+				1DB86A3F24380A939DB958CA6B755A8C /* Pods-ControleDeGastos-resources.sh */,
+				32E0E73B353F495225C314A378243337 /* Pods-ControleDeGastos-umbrella.h */,
+				F56C063CC548D5541E574F27949296AB /* Pods-ControleDeGastos.debug.xcconfig */,
+				70A5A367DB5CE738447D760694119644 /* Pods-ControleDeGastos.release.xcconfig */,
+			);
+			name = "Pods-ControleDeGastos";
+			path = "Target Support Files/Pods-ControleDeGastos";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		03A9F4525DD916430BCD6C0A9AC2A6B0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93C36C6886CEECBD5D15EB8C5FD1A809 /* TinyLog-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54544D3F42C3991894A6E20486661FD4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9851B82FEE0D5399A1010CA0E7CB99C1 /* Pods-ControleDeGastos-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54B393B05B14E5C49D15F57389978A1A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA84C9752E09E96F2C2E97AEF8759A4F /* HFSwipeView-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		637FE3DEC6564FEC105DEC4869161198 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEFFF378832609785963CF7D3CC885A6 /* ALView+PureLayout.h in Headers */,
+				21AA6C6CFEED5D0636D247257441BFA4 /* NSArray+PureLayout.h in Headers */,
+				08EE79ACD711FA9AC31FB97EF1E139B2 /* NSLayoutConstraint+PureLayout.h in Headers */,
+				F6DA921A453285F9B3403C757134B733 /* PureLayout+Internal.h in Headers */,
+				A41C037A8731215540AD0546179BB540 /* PureLayout-umbrella.h in Headers */,
+				A43ACF748EB4D094F7C83A5CCA34A3D0 /* PureLayout.h in Headers */,
+				66B50CA3FF7769808BD8D21E3EEDE3A2 /* PureLayoutDefines.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3720406451EDC459067BCFC46DC2D2DB /* PureLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89BACA4E12004424B3B311C1CF4BB8AA /* Build configuration list for PBXNativeTarget "PureLayout" */;
+			buildPhases = (
+				C96C65E00CFABA2398E01E5C27831FB4 /* Sources */,
+				CA7936C0E6508083A9BC6DC3C63CDA6C /* Frameworks */,
+				637FE3DEC6564FEC105DEC4869161198 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PureLayout;
+			productName = PureLayout;
+			productReference = 5DD32C013E86DEA36D916DC6DB7A2AA7 /* PureLayout.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D6DCF0D49C0ED356F6E26B5963D1E71D /* HFSwipeView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D170DBE463780A0C39A4B2D7A8EBE335 /* Build configuration list for PBXNativeTarget "HFSwipeView" */;
+			buildPhases = (
+				E928C78AEA4073300053DA9EFF073E8C /* Sources */,
+				4E1CEB69785103858B2505FB1C842FAB /* Frameworks */,
+				54B393B05B14E5C49D15F57389978A1A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5AE69C7390DDBC06502532D19CCAF0AF /* PBXTargetDependency */,
+				E1165C026DE21401BA3BD97BA2526ABE /* PBXTargetDependency */,
+			);
+			name = HFSwipeView;
+			productName = HFSwipeView;
+			productReference = D6BF95FBED097251426919C061725DA0 /* HFSwipeView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E609275EB8EF6AB4CFBAED04D4B6315F /* TinyLog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D9158299BF84B8268687DB5614F2FD9 /* Build configuration list for PBXNativeTarget "TinyLog" */;
+			buildPhases = (
+				3EC769ED3AEDF2F98583F192945682D3 /* Sources */,
+				52FE4AD7D6C1F8C9B530FCC5DC100E80 /* Frameworks */,
+				03A9F4525DD916430BCD6C0A9AC2A6B0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TinyLog;
+			productName = TinyLog;
+			productReference = F1B8737BBC7CF25AADB7117B4477298E /* TinyLog.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E80C4115592CC6ED94D986C52F1FF8EB /* Pods-ControleDeGastos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6320799F4EE60BAD5770ED79A7DF9FBF /* Build configuration list for PBXNativeTarget "Pods-ControleDeGastos" */;
+			buildPhases = (
+				28DC3E8737297E72005EC54AAC6998B8 /* Sources */,
+				791F116B2058866B411C1D901B1A937D /* Frameworks */,
+				54544D3F42C3991894A6E20486661FD4 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5E6BEEBBD3833B423710A6C9DDBDF3EC /* PBXTargetDependency */,
+				AEB0FBF9E147D77B56AA2FD8566D45DC /* PBXTargetDependency */,
+				82B5EF998AE1463402F582658FC361D1 /* PBXTargetDependency */,
+			);
+			name = "Pods-ControleDeGastos";
+			productName = "Pods-ControleDeGastos";
+			productReference = 0340D503795C22EB866C3B661B91219F /* Pods_ControleDeGastos.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 2AD86841B051961B9731512F05C7E4F5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D6DCF0D49C0ED356F6E26B5963D1E71D /* HFSwipeView */,
+				E80C4115592CC6ED94D986C52F1FF8EB /* Pods-ControleDeGastos */,
+				3720406451EDC459067BCFC46DC2D2DB /* PureLayout */,
+				E609275EB8EF6AB4CFBAED04D4B6315F /* TinyLog */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		28DC3E8737297E72005EC54AAC6998B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30884A9362D52993A1391D66B4F79B44 /* Pods-ControleDeGastos-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EC769ED3AEDF2F98583F192945682D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B2EB09AE7457C553D7B14C496321684 /* TinyLog-dummy.m in Sources */,
+				CFD99960BA38A76CD5EB80526DE31E3D /* TinyLog.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C96C65E00CFABA2398E01E5C27831FB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				726774EE15651C2ED7DC32646543C76D /* ALView+PureLayout.m in Sources */,
+				84420BDEDBB4D9F5EAF2DD81FA74BB30 /* NSArray+PureLayout.m in Sources */,
+				4BE19C17A039461EF0949306A16F2AC5 /* NSLayoutConstraint+PureLayout.m in Sources */,
+				B4F0B132A85C75F7C478B3D3C8D42480 /* PureLayout-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E928C78AEA4073300053DA9EFF073E8C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				732627639E69BEEF1A4DE115E13E7519 /* HFSwipeView+Animation.swift in Sources */,
+				CA95F47546AB9DC688974E9E6EC9EC53 /* HFSwipeView+AutoSlide.swift in Sources */,
+				E2073CC73A9E3DC035E2093E40D90B09 /* HFSwipeView+Delegate.swift in Sources */,
+				AFAA741D452A4E8EF3977FF47B6E5ADA /* HFSwipeView+Index.swift in Sources */,
+				884CB9C5C53B521DD751B79232F83F78 /* HFSwipeView+Offset.swift in Sources */,
+				CFB39C83C41C4246B43522A94AEC65D7 /* HFSwipeView+Page.swift in Sources */,
+				7EB2C6063E5EAE113EBDC2D61706173F /* HFSwipeView+Utility.swift in Sources */,
+				E907BD21ECB9C4F8601BD23D0381EB7B /* HFSwipeView-dummy.m in Sources */,
+				5FA4D924E551B8034514AC1059319F4C /* HFSwipeView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5AE69C7390DDBC06502532D19CCAF0AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PureLayout;
+			target = 3720406451EDC459067BCFC46DC2D2DB /* PureLayout */;
+			targetProxy = 1AD0F682FDD439B791AD8D1DD63264A7 /* PBXContainerItemProxy */;
+		};
+		5E6BEEBBD3833B423710A6C9DDBDF3EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HFSwipeView;
+			target = D6DCF0D49C0ED356F6E26B5963D1E71D /* HFSwipeView */;
+			targetProxy = 9319E4E697E43F8692680854CA69FB3B /* PBXContainerItemProxy */;
+		};
+		82B5EF998AE1463402F582658FC361D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TinyLog;
+			target = E609275EB8EF6AB4CFBAED04D4B6315F /* TinyLog */;
+			targetProxy = 862998DEA783BECC1EC41933AAE04C60 /* PBXContainerItemProxy */;
+		};
+		AEB0FBF9E147D77B56AA2FD8566D45DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PureLayout;
+			target = 3720406451EDC459067BCFC46DC2D2DB /* PureLayout */;
+			targetProxy = E2ECA66025B50A8135F6B34FD560082D /* PBXContainerItemProxy */;
+		};
+		E1165C026DE21401BA3BD97BA2526ABE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TinyLog;
+			target = E609275EB8EF6AB4CFBAED04D4B6315F /* TinyLog */;
+			targetProxy = 0B2F84DF996E1533EAB080969C964DEB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		12458DD16935C0E187239DA472A322D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F56C063CC548D5541E574F27949296AB /* Pods-ControleDeGastos.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ControleDeGastos/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ControleDeGastos/Pods-ControleDeGastos.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ControleDeGastos;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		12914D756594D15C6F2CA12FE5F89F1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		266EC588FBE7C85543FA67F37610DBC9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33BA4E9821E955120079A4F9787225EB /* TinyLog.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TinyLog/TinyLog-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TinyLog/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TinyLog/TinyLog.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = TinyLog;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		32637069E78D05F533A244D19B3EEF05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33BA4E9821E955120079A4F9787225EB /* TinyLog.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TinyLog/TinyLog-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TinyLog/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TinyLog/TinyLog.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = TinyLog;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		386233022BA8B4A31A7844FE8B1ED8EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE042170F558F26A566488C795B48794 /* PureLayout.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PureLayout/PureLayout-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PureLayout/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PureLayout/PureLayout.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = PureLayout;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B220A141978B1622D19B4EA759C156E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D73F55A5E9CCFAD7C059C6D726CE32E5 /* HFSwipeView.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/HFSwipeView/HFSwipeView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HFSwipeView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HFSwipeView/HFSwipeView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = HFSwipeView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B3B5FE9C92C0DF9999B048C66B03F83B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D73F55A5E9CCFAD7C059C6D726CE32E5 /* HFSwipeView.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/HFSwipeView/HFSwipeView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HFSwipeView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HFSwipeView/HFSwipeView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = HFSwipeView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E72E7977875C2D251FC62736BBDDC389 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F4178F1AEA1AE64BCD8EE2454D2ECD84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70A5A367DB5CE738447D760694119644 /* Pods-ControleDeGastos.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ControleDeGastos/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ControleDeGastos/Pods-ControleDeGastos.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ControleDeGastos;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F494F4677CD3C8303359E89FD0BDE066 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE042170F558F26A566488C795B48794 /* PureLayout.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PureLayout/PureLayout-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PureLayout/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PureLayout/PureLayout.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = PureLayout;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12914D756594D15C6F2CA12FE5F89F1B /* Debug */,
+				E72E7977875C2D251FC62736BBDDC389 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6320799F4EE60BAD5770ED79A7DF9FBF /* Build configuration list for PBXNativeTarget "Pods-ControleDeGastos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12458DD16935C0E187239DA472A322D4 /* Debug */,
+				F4178F1AEA1AE64BCD8EE2454D2ECD84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6D9158299BF84B8268687DB5614F2FD9 /* Build configuration list for PBXNativeTarget "TinyLog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32637069E78D05F533A244D19B3EEF05 /* Debug */,
+				266EC588FBE7C85543FA67F37610DBC9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		89BACA4E12004424B3B311C1CF4BB8AA /* Build configuration list for PBXNativeTarget "PureLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				386233022BA8B4A31A7844FE8B1ED8EF /* Debug */,
+				F494F4677CD3C8303359E89FD0BDE066 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D170DBE463780A0C39A4B2D7A8EBE335 /* Build configuration list for PBXNativeTarget "HFSwipeView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B220A141978B1622D19B4EA759C156E6 /* Debug */,
+				B3B5FE9C92C0DF9999B048C66B03F83B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

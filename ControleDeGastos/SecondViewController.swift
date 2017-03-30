@@ -7,16 +7,20 @@
 //
 
 import UIKit
+import HFSwipeView.Swift
 
 class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+   
+    
     
     @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var valueLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     var items:[Item] = [Item(name: "Almoço", date: "30/03", value:30.0)]
-    
-    
-    override func viewDidLoad() {
+ 
+   
+   override func viewDidLoad() {
         super.viewDidLoad()
         
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(SecondViewController.respond(gesture:)))
