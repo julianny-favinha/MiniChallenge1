@@ -10,10 +10,19 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
+    @IBOutlet weak var iconDespesasTot: UIImageView!
+    @IBOutlet weak var iconReceitasTot: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
+
+        let line = UIView(frame: CGRect(x: 15, y: 285, width: 345, height: 1))
+        line.backgroundColor = UIColor.lightGray
+        self.view.addSubview(line)
+        
+        self.iconReceitasTot.image = UIImage(named: "piggy-bank.png")
+        self.iconDespesasTot.image = UIImage(named: "wallet.png")
+        
+}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

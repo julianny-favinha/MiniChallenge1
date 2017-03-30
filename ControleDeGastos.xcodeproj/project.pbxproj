@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		427FF14C1E8D8CA4000E7CCC /* piggy-bank.png in Resources */ = {isa = PBXBuildFile; fileRef = 427FF14B1E8D8CA4000E7CCC /* piggy-bank.png */; };
+		427FF14E1E8D8CAA000E7CCC /* household.png in Resources */ = {isa = PBXBuildFile; fileRef = 427FF14D1E8D8CAA000E7CCC /* household.png */; };
+		427FF1501E8D8CB3000E7CCC /* wallet.png in Resources */ = {isa = PBXBuildFile; fileRef = 427FF14F1E8D8CB3000E7CCC /* wallet.png */; };
 		AD922B50E0F5A2FE8B9EB08D /* Pods_ControleDeGastos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D09BAEC67FBF313537F722 /* Pods_ControleDeGastos.framework */; };
 		B11077791E8D2CC300D5EF56 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11077781E8D2CC300D5EF56 /* TableViewController.swift */; };
 		B1A042D01E8BF58F00E7BF27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A042CF1E8BF58F00E7BF27 /* AppDelegate.swift */; };
@@ -21,6 +24,9 @@
 
 /* Begin PBXFileReference section */
 		23A35EC3408C04755D45D576 /* Pods-ControleDeGastos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ControleDeGastos.release.xcconfig"; path = "Pods/Target Support Files/Pods-ControleDeGastos/Pods-ControleDeGastos.release.xcconfig"; sourceTree = "<group>"; };
+		427FF14B1E8D8CA4000E7CCC /* piggy-bank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "piggy-bank.png"; path = "../../../Documents/BEPiD/MiniChallenge1/piggy-bank.png"; sourceTree = "<group>"; };
+		427FF14D1E8D8CAA000E7CCC /* household.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = household.png; path = ../../../Documents/BEPiD/MiniChallenge1/household.png; sourceTree = "<group>"; };
+		427FF14F1E8D8CB3000E7CCC /* wallet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wallet.png; path = ../../../Downloads/wallet.png; sourceTree = "<group>"; };
 		761013881E8D727000947005 /* ControleDeGastos-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ControleDeGastos-Bridging-Header.h"; sourceTree = "<group>"; };
 		80BBE36D84DF6ABD9FDE49BE /* Pods-ControleDeGastos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ControleDeGastos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ControleDeGastos/Pods-ControleDeGastos.debug.xcconfig"; sourceTree = "<group>"; };
 		A2D09BAEC67FBF313537F722 /* Pods_ControleDeGastos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ControleDeGastos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +87,9 @@
 				B1A042CF1E8BF58F00E7BF27 /* AppDelegate.swift */,
 				B1A042D11E8BF58F00E7BF27 /* FirstViewController.swift */,
 				B1A042D31E8BF58F00E7BF27 /* SecondViewController.swift */,
+				427FF14B1E8D8CA4000E7CCC /* piggy-bank.png */,
+				427FF14F1E8D8CB3000E7CCC /* wallet.png */,
+				427FF14D1E8D8CAA000E7CCC /* household.png */,
 				B1A042D51E8BF58F00E7BF27 /* Main.storyboard */,
 				B11077781E8D2CC300D5EF56 /* TableViewController.swift */,
 				B1A042D81E8BF58F00E7BF27 /* Assets.xcassets */,
@@ -168,7 +177,10 @@
 			files = (
 				B1A042DC1E8BF58F00E7BF27 /* LaunchScreen.storyboard in Resources */,
 				B1A042D91E8BF58F00E7BF27 /* Assets.xcassets in Resources */,
+				427FF14C1E8D8CA4000E7CCC /* piggy-bank.png in Resources */,
 				B1A042D71E8BF58F00E7BF27 /* Main.storyboard in Resources */,
+				427FF1501E8D8CB3000E7CCC /* wallet.png in Resources */,
+				427FF14E1E8D8CAA000E7CCC /* household.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,10 +17,13 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var valueLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
-    var items:[Item] = [Item(name: "Almoço", date: "30/03", value:30.0)]
+    var items:[Item] = [Item(name: "Almoço", date: "25 de abril", value: 30.00, category: "Alimentação")]
  
+    @IBAction func Cancel(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
    
-   override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
         
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(SecondViewController.respond(gesture:)))
@@ -63,7 +66,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         cell.name.text = items[indexPath.row].name
         cell.value.text = String("R$\(items[indexPath.row].value)")
-        cell.date.text = items[indexPath.row].date
+        cell.date.text = String("\(items[indexPath.row].date) - \(items[indexPath.row].category)")
         
         return cell
     }
