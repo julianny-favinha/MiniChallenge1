@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -131,10 +131,10 @@
             </objects>
             <point key="canvasLocation" x="-34" y="364"/>
         </scene>
-        <!--Second View Controller-->
+        <!--New Item View Controller-->
         <scene sceneID="0en-Hp-hDJ">
             <objects>
-                <viewController id="w2j-hd-lxr" customClass="SecondViewController" customModule="ControleDeGastos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="w2j-hd-lxr" customClass="NewItemViewController" customModule="ControleDeGastos" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bdd-sp-zUi"/>
                         <viewControllerLayoutGuide type="bottom" id="23f-RD-Grz"/>
@@ -153,7 +153,11 @@
                                                 <action selector="Cancel:" destination="w2j-hd-lxr" id="6vn-ep-sH9"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Salvar" style="plain" id="XPV-YX-azL"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Salvar" style="plain" id="XPV-YX-azL">
+                                            <connections>
+                                                <action selector="savePressed:" destination="w2j-hd-lxr" id="HkN-FW-l1e"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -283,6 +287,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="datePicker" destination="qVz-Ix-Ac2" id="Nm0-3O-yGQ"/>
+                        <outlet property="descriptionTextField" destination="KSb-NE-CcQ" id="DWP-Y9-XPn"/>
+                        <outlet property="paymentSegmentedControl" destination="cgr-y0-frw" id="z0y-ob-uMf"/>
+                        <outlet property="replayNumberSegmentedControl" destination="dwa-Lm-FwJ" id="J5b-be-ewh"/>
+                        <outlet property="replaySwitch" destination="K9y-jZ-5AM" id="ydw-Au-ldQ"/>
+                        <outlet property="saveBarButtonItem" destination="XPV-YX-azL" id="xcj-vl-ZnA"/>
+                        <outlet property="typeSegmentedControl" destination="Zky-6O-uht" id="ZqQ-7U-PBl"/>
+                        <outlet property="valueTextField" destination="Glv-jD-evH" id="naF-Pv-PPz"/>
+                        <outlet property="whenSegmentedControl" destination="GeH-NR-uDC" id="mUn-Oh-5wc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D3k-JX-ovs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

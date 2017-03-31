@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AD922B50E0F5A2FE8B9EB08D /* Pods_ControleDeGastos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D09BAEC67FBF313537F722 /* Pods_ControleDeGastos.framework */; };
+		B10A02001E8E78970030120C /* NewItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10A01FF1E8E78970030120C /* NewItemViewController.swift */; };
 		B11077791E8D2CC300D5EF56 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11077781E8D2CC300D5EF56 /* TableViewController.swift */; };
 		B1A042D01E8BF58F00E7BF27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A042CF1E8BF58F00E7BF27 /* AppDelegate.swift */; };
 		B1A042D21E8BF58F00E7BF27 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A042D11E8BF58F00E7BF27 /* FirstViewController.swift */; };
@@ -24,6 +25,7 @@
 		761013881E8D727000947005 /* ControleDeGastos-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ControleDeGastos-Bridging-Header.h"; sourceTree = "<group>"; };
 		80BBE36D84DF6ABD9FDE49BE /* Pods-ControleDeGastos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ControleDeGastos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ControleDeGastos/Pods-ControleDeGastos.debug.xcconfig"; sourceTree = "<group>"; };
 		A2D09BAEC67FBF313537F722 /* Pods_ControleDeGastos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ControleDeGastos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B10A01FF1E8E78970030120C /* NewItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewItemViewController.swift; sourceTree = "<group>"; };
 		B11077781E8D2CC300D5EF56 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		B1A042CC1E8BF58F00E7BF27 /* ControleDeGastos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ControleDeGastos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1A042CF1E8BF58F00E7BF27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				B1A042ED1E8C049600E7BF27 /* ItemCell.swift */,
 				B1A042EF1E8C04A400E7BF27 /* Item.swift */,
 				761013881E8D727000947005 /* ControleDeGastos-Bridging-Header.h */,
+				B10A01FF1E8E78970030120C /* NewItemViewController.swift */,
 			);
 			path = ControleDeGastos;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				B1A042F01E8C04A400E7BF27 /* Item.swift in Sources */,
 				B1A042D01E8BF58F00E7BF27 /* AppDelegate.swift in Sources */,
 				B1A042D21E8BF58F00E7BF27 /* FirstViewController.swift in Sources */,
+				B10A02001E8E78970030120C /* NewItemViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
