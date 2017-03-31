@@ -9,15 +9,25 @@
 import Foundation
 
 class Item {
-    public var name:String
+    public var type:String
     public var value:Double
-    public var date:String
     public var category:String
+    public var description:String
+    public var payment:String
+    public var date:String
+    public var replay:String
+    public var when:String
+    public var replayNumber:Int
     
-    init(name:String, date:String, value:Double, category: String) {
-        self.name = name
+    init(type:String, value:Double, category:String, description: String, payment: String, date: String, replay: String, when: String, replayNumber: Int) {
+        self.type = type
         self.value = value
-        self.date = date
         self.category = category
+        self.description = description
+        self.payment = payment
+        self.date = date
+        self.replay = replay
+        self.when = when
+        self.replayNumber = replayNumber
     }
 }

@@ -17,7 +17,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var valueLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
-    var items:[Item] = [Item(name: "Almoço", date: "25 de abril", value: 30.00, category: "Alimentação")]
+    var items:[Item] = [Item(type: "Despesa", value: 20.0, category: "Alimentação", description: "Bandeco", payment: "Dinheiro", date: "31/03/2017", replay: "Sim", when: "Mensalmente", replayNumber: 4)]
  
     @IBAction func Cancel(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -63,10 +63,12 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ItemCell
+        let item = items[indexPath.row]
         
-        cell.name.text = items[indexPath.row].name
-        cell.value.text = String("R$\(items[indexPath.row].value)")
-        cell.date.text = String("\(items[indexPath.row].date) - \(items[indexPath.row].category)")
+        cell.descriptionLabel.text = item.description
+        cell.valueLabel.text = String("R$\(item.value)")
+        cell.dateLabel.text = item.date
+        cell.paymentLabel.text = item.payment
         
         return cell
     }
