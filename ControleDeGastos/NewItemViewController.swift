@@ -8,21 +8,60 @@
 
 import UIKit
 
-class NewItemViewController: UIViewController {
+class NewItemViewController: UIViewController, KPDropMenuDelegate {
+    
+    // INICIO MENU CATEGORIA
+    @IBOutlet weak var dropMenu: KPDropMenu!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        dropMenu.title = "Selecione"
+        dropMenu.items = ["Alimentação", "Vestuário", "Lazer", "Fármacia"]
+        dropMenu.itemsIDs = ["0", "1", "2", "3"]
+        dropMenu.itemsFont = UIFont(name: "Helvetica-Regular", size: 12.0)
+        dropMenu.titleTextAlignment = .center
+        dropMenu.delegate = self
+        
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    
+    func didShow( _ dropMenu: KPDropMenu!) {
+        print("didShow")
+    }
+    
+    func didHide(_ dropMenu: KPDropMenu!) {
+        print("didHide")
+    }
+    
+    func didSelectItem(_ dropMenu: KPDropMenu!, at atIntedex: Int32) {
+        
+        if (dropMenu == self.dropMenu) {
+            print("\(dropMenu.items[Int(atIntedex)]), with TAG: \(dropMenu.tag)")
+        }
+    }
+    // FIM MENU CATEGORIA
+    
+    
     
     /* 0 -> Despesa
-       1 -> Receita */
+     1 -> Receita */
     @IBOutlet weak var typeSegmentedControl: UISegmentedControl!
     
     /* 0 -> Dinheiro
-       1 -> Crédito
-       2 -> Débito */
+     1 -> Crédito
+     2 -> Débito */
     @IBOutlet weak var paymentSegmentedControl: UISegmentedControl!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var replaySwitch: UISwitch!
     
     /* 0 -> Semanalmente
-       1 -> Mensalmente */
+     1 -> Mensalmente */
     @IBOutlet weak var whenSegmentedControl: UISegmentedControl!
     
     @IBOutlet weak var valueTextField: UITextField!
@@ -33,13 +72,6 @@ class NewItemViewController: UIViewController {
     @IBOutlet weak var whenLabel: UILabel!
     @IBOutlet weak var replayNumberLabel: UILabel!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
 
     @IBAction func savePressed(_ sender: Any) {
         /* segmentedControl

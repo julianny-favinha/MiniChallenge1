@@ -8,26 +8,49 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>PieCharts.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
 		</dict>
 		<key>Pods-ControleDeGastos.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>2</integer>
 		</dict>
 		<key>PureLayout.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>3</integer>
 		</dict>
 		<key>TinyLog.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>4</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>3720406451EDC459067BCFC46DC2D2DB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5E4B9D023702B55BE61C5C148DF100EA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A9DE0532A3228B82C34418EC77660EF1</key>
 		<dict>
 			<key>primary</key>
 			<true/>

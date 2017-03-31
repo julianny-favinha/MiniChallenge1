@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		760556291E8EB84200F7EC00 /* KPDropMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 760556281E8EB84200F7EC00 /* KPDropMenu.m */; };
 		AD922B50E0F5A2FE8B9EB08D /* Pods_ControleDeGastos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D09BAEC67FBF313537F722 /* Pods_ControleDeGastos.framework */; };
 		B10A02001E8E78970030120C /* NewItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10A01FF1E8E78970030120C /* NewItemViewController.swift */; };
 		B11077791E8D2CC300D5EF56 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11077781E8D2CC300D5EF56 /* TableViewController.swift */; };
@@ -22,6 +23,8 @@
 
 /* Begin PBXFileReference section */
 		23A35EC3408C04755D45D576 /* Pods-ControleDeGastos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ControleDeGastos.release.xcconfig"; path = "Pods/Target Support Files/Pods-ControleDeGastos/Pods-ControleDeGastos.release.xcconfig"; sourceTree = "<group>"; };
+		760556271E8EB84200F7EC00 /* KPDropMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPDropMenu.h; sourceTree = "<group>"; };
+		760556281E8EB84200F7EC00 /* KPDropMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPDropMenu.m; sourceTree = "<group>"; };
 		761013881E8D727000947005 /* ControleDeGastos-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ControleDeGastos-Bridging-Header.h"; sourceTree = "<group>"; };
 		80BBE36D84DF6ABD9FDE49BE /* Pods-ControleDeGastos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ControleDeGastos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ControleDeGastos/Pods-ControleDeGastos.debug.xcconfig"; sourceTree = "<group>"; };
 		A2D09BAEC67FBF313537F722 /* Pods_ControleDeGastos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ControleDeGastos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +62,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		760556261E8EB7BD00F7EC00 /* KPDropMenu */ = {
+			isa = PBXGroup;
+			children = (
+				760556271E8EB84200F7EC00 /* KPDropMenu.h */,
+				760556281E8EB84200F7EC00 /* KPDropMenu.m */,
+			);
+			name = KPDropMenu;
+			sourceTree = "<group>";
+		};
 		B1A042C31E8BF58F00E7BF27 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +92,7 @@
 		B1A042CE1E8BF58F00E7BF27 /* ControleDeGastos */ = {
 			isa = PBXGroup;
 			children = (
+				760556261E8EB7BD00F7EC00 /* KPDropMenu */,
 				B1A042CF1E8BF58F00E7BF27 /* AppDelegate.swift */,
 				B1A042D11E8BF58F00E7BF27 /* FirstViewController.swift */,
 				B1A042D31E8BF58F00E7BF27 /* SecondViewController.swift */,
@@ -234,6 +247,7 @@
 				B11077791E8D2CC300D5EF56 /* TableViewController.swift in Sources */,
 				B1A042EE1E8C049600E7BF27 /* ItemCell.swift in Sources */,
 				B1A042F01E8C04A400E7BF27 /* Item.swift in Sources */,
+				760556291E8EB84200F7EC00 /* KPDropMenu.m in Sources */,
 				B1A042D01E8BF58F00E7BF27 /* AppDelegate.swift in Sources */,
 				B1A042D21E8BF58F00E7BF27 /* FirstViewController.swift in Sources */,
 				B10A02001E8E78970030120C /* NewItemViewController.swift in Sources */,
