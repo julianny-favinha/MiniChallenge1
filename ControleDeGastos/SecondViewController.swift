@@ -11,11 +11,7 @@ import HFSwipeView.Swift
 
 class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-   
-    
-    
     @IBOutlet weak var navigationBar: UINavigationBar!
-    @IBOutlet weak var valueLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     var items:[Item] = [Item(type: "Despesa", value: 20.0, category: "Alimentação", description: "Bandeco", payment: "Dinheiro", date: "31/03/2017", replay: "Sim", when: "Mensalmente", replayNumber: 4)]
  
