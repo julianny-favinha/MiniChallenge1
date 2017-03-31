@@ -19,8 +19,8 @@ class FirstViewController: UIViewController {
         line.backgroundColor = UIColor.lightGray
         self.view.addSubview(line)
         
-        self.iconReceitasTot.image = UIImage(named: "piggy-bank.png")
-        self.iconDespesasTot.image = UIImage(named: "wallet.png")
+//        self.iconReceitasTot.image = UIImage(named: "piggy-bank.png")
+//        self.iconDespesasTot.image = UIImage(named: "wallet.png")
         
 }
 
