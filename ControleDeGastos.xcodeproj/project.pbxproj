@@ -71,6 +71,53 @@
 			name = KPDropMenu;
 			sourceTree = "<group>";
 		};
+		7605562A1E8EBE5400F7EC00 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B1A042CF1E8BF58F00E7BF27 /* AppDelegate.swift */,
+				B1A042D11E8BF58F00E7BF27 /* FirstViewController.swift */,
+				B1A042D31E8BF58F00E7BF27 /* SecondViewController.swift */,
+				B10A01FF1E8E78970030120C /* NewItemViewController.swift */,
+				B11077781E8D2CC300D5EF56 /* TableViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		7605562B1E8EBF4600F7EC00 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				B1A042DA1E8BF58F00E7BF27 /* LaunchScreen.storyboard */,
+				B1A042D51E8BF58F00E7BF27 /* Main.storyboard */,
+			);
+			name = StoryBoards;
+			sourceTree = "<group>";
+		};
+		7605562C1E8EBF6000F7EC00 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				B1A042EF1E8C04A400E7BF27 /* Item.swift */,
+				B1A042ED1E8C049600E7BF27 /* ItemCell.swift */,
+			);
+			name = Items;
+			sourceTree = "<group>";
+		};
+		7605562D1E8EBF7D00F7EC00 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B1A042D81E8BF58F00E7BF27 /* Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		7605562E1E8EBF8F00F7EC00 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				B1A042DD1E8BF58F00E7BF27 /* Info.plist */,
+				761013881E8D727000947005 /* ControleDeGastos-Bridging-Header.h */,
+			);
+			name = SupportingFiles;
+			sourceTree = "<group>";
+		};
 		B1A042C31E8BF58F00E7BF27 = {
 			isa = PBXGroup;
 			children = (
@@ -92,19 +139,12 @@
 		B1A042CE1E8BF58F00E7BF27 /* ControleDeGastos */ = {
 			isa = PBXGroup;
 			children = (
+				7605562E1E8EBF8F00F7EC00 /* SupportingFiles */,
+				7605562D1E8EBF7D00F7EC00 /* Resources */,
+				7605562C1E8EBF6000F7EC00 /* Items */,
+				7605562B1E8EBF4600F7EC00 /* StoryBoards */,
 				760556261E8EB7BD00F7EC00 /* KPDropMenu */,
-				B1A042CF1E8BF58F00E7BF27 /* AppDelegate.swift */,
-				B1A042D11E8BF58F00E7BF27 /* FirstViewController.swift */,
-				B1A042D31E8BF58F00E7BF27 /* SecondViewController.swift */,
-				B1A042D51E8BF58F00E7BF27 /* Main.storyboard */,
-				B11077781E8D2CC300D5EF56 /* TableViewController.swift */,
-				B1A042D81E8BF58F00E7BF27 /* Assets.xcassets */,
-				B1A042DA1E8BF58F00E7BF27 /* LaunchScreen.storyboard */,
-				B1A042DD1E8BF58F00E7BF27 /* Info.plist */,
-				B1A042ED1E8C049600E7BF27 /* ItemCell.swift */,
-				B1A042EF1E8C04A400E7BF27 /* Item.swift */,
-				761013881E8D727000947005 /* ControleDeGastos-Bridging-Header.h */,
-				B10A01FF1E8E78970030120C /* NewItemViewController.swift */,
+				7605562A1E8EBE5400F7EC00 /* Controllers */,
 			);
 			path = ControleDeGastos;
 			sourceTree = "<group>";
