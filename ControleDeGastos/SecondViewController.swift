@@ -13,6 +13,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var tableView: UITableView!
+    
     var items:[Item] = [Item(type: "Despesa", value: 20.0, category: "Alimentação", description: "Bandeco", payment: "Dinheiro", date: "31/03/2017", replay: "Sim", when: "Mensalmente", replayNumber: 4)]
  
     @IBAction func Cancel(_ sender: Any) {
@@ -32,7 +33,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func respond(gesture: UIGestureRecognizer) {
-        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+        if let swipeGesture: UISwipeGestureRecognizer = gesture as? UISwipeGestureRecognizer {
             switch swipeGesture.direction {
             case UISwipeGestureRecognizerDirection.right:
                 self.items.removeAll()
@@ -58,7 +59,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ItemCell
+        let cell: ItemCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ItemCell
         let item = items[indexPath.row]
         
         cell.descriptionLabel.text = item.description

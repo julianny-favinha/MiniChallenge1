@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0820"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E80C4115592CC6ED94D986C52F1FF8EB"
+               BlueprintIdentifier = "A9DE0532A3228B82C34418EC77660EF1"
                BuildableName = "Pods_ControleDeGastos.framework"
                BlueprintName = "Pods-ControleDeGastos"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E80C4115592CC6ED94D986C52F1FF8EB"
+            BlueprintIdentifier = "A9DE0532A3228B82C34418EC77660EF1"
             BuildableName = "Pods_ControleDeGastos.framework"
             BlueprintName = "Pods-ControleDeGastos"
             ReferencedContainer = "container:Pods.xcodeproj">
@@ -60,15 +60,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E80C4115592CC6ED94D986C52F1FF8EB"
-            BuildableName = "Pods_ControleDeGastos.framework"
-            BlueprintName = "Pods-ControleDeGastos"
-            ReferencedContainer = "container:Pods.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

@@ -164,7 +164,7 @@
                                         <barButtonItem key="leftBarButtonItem" title="Cancelar" style="plain" id="Uo2-ne-Clj">
                                             <connections>
                                                 <action selector="Cancel:" destination="w2j-hd-lxr" id="6vn-ep-sH9"/>
-                                                <segue destination="iyL-3e-Zuq" kind="showDetail" id="tDx-cN-Oxp"/>
+                                                <segue destination="iyL-3e-Zuq" kind="show" id="tDx-cN-Oxp"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Salvar" style="plain" id="XPV-YX-azL">
@@ -459,6 +459,11 @@
                                 <rect key="frame" x="8" y="234" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pld-O3-2wF" customClass="PieChart" customModule="PieCharts">
+                                <rect key="frame" x="67" y="348" width="240" height="242"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -481,6 +486,11 @@
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" title="Title" id="WSU-oX-nx0"/>
+                    <connections>
+                        <outlet property="expenseImageView" destination="Cn8-TU-drC" id="bZh-lH-F2e"/>
+                        <outlet property="incomeImageView" destination="7CP-xY-dj4" id="cxj-Hc-BKe"/>
+                        <outlet property="pieChart" destination="pld-O3-2wF" id="fJ4-uj-wH9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lY2-e9-Csa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
