@@ -161,10 +161,9 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Novo Item" id="GQe-NV-sJR">
-                                        <barButtonItem key="leftBarButtonItem" style="done" systemItem="cancel" id="Uo2-ne-Clj">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancelar" style="done" id="Uo2-ne-Clj" userLabel="Cancelar">
                                             <connections>
-                                                <action selector="Cancel:" destination="w2j-hd-lxr" id="6vn-ep-sH9"/>
-                                                <segue destination="iyL-3e-Zuq" kind="show" id="tDx-cN-Oxp"/>
+                                                <action selector="cancelPressed:" destination="w2j-hd-lxr" id="Rm4-4M-4Fa"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="XPV-YX-azL">
@@ -506,7 +505,4 @@
     <resources>
         <image name="household.png" width="25" height="23"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="tDx-cN-Oxp"/>
-    </inferredMetricsTieBreakers>
 </document>
