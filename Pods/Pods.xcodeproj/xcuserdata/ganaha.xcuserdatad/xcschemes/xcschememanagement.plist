@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>PieCharts.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 		<key>Pods-ControleDeGastos.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -28,6 +33,16 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>3720406451EDC459067BCFC46DC2D2DB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5E4B9D023702B55BE61C5C148DF100EA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A9DE0532A3228B82C34418EC77660EF1</key>
 		<dict>
 			<key>primary</key>
 			<true/>

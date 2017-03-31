@@ -22,8 +22,8 @@ class FirstViewController: UIViewController {
         line.backgroundColor = UIColor.lightGray
         self.view.addSubview(line)
         
-        //self.iconReceitasTot.image = UIImage(named: "piggy-bank.png")
-        //self.iconDespesasTot.image = UIImage(named: "wallet.png")
+        self.incomeImageView.image = UIImage(named: "piggy-bank.png")
+        self.expenseImageView.image = UIImage(named: "wallet.png")
         
         self.view.addSubview(pieChart)
         pieChart.layers = [/*createCustomViewsLayer(),*/ createTextLayer()]
@@ -38,7 +38,7 @@ class FirstViewController: UIViewController {
         /* get information of categories in database to make a pie chart */
         let categories:[String] = ["Alimentação", "Vestuário", "Lazer", "Farmácia"]
         let quantity:[Double] = [20, 10, 5, 2]
-        let colors:[UIColor] = [.orange, .red, .blue, .purple]
+        let colors:[UIColor] = [UIColor(red:0.86, green:0.86, blue:0.86, alpha:1.0), UIColor(red:0.91, green:0.33, blue:0.33, alpha:1.0), UIColor(red:0.33, green:0.46, blue:0.91, alpha:1.0), UIColor(red:0.92, green:0.89, blue:0.47, alpha:1.0)]
         var modelsArray:[PieSliceModel] = []
         
         for i in 0..<categories.count {

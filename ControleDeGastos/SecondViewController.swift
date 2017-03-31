@@ -14,6 +14,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var categoryIcon: UIImageView!
     var items:[Item] = [Item(type: "Despesa", value: 20.0, category: "Alimentação", description: "Bandeco", payment: "Dinheiro", date: "31/03/2017", replay: "Sim", when: "Mensalmente", replayNumber: 4)]
    
     override func viewDidLoad() {
