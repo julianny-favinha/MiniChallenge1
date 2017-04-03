@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import CloudKit
 
 class NewItemViewController: UIViewController, KPDropMenuDelegate {
     
     // INICIO MENU CATEGORIA
     @IBOutlet weak var dropMenu: KPDropMenu!
+    var dropMenuSelected:Int = -1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,12 +47,18 @@ class NewItemViewController: UIViewController, KPDropMenuDelegate {
     func didSelectItem(_ dropMenu: KPDropMenu!, at atIntedex: Int32) {
         
         if (dropMenu == self.dropMenu) {
+            print(atIntedex)
             print("\(dropMenu.items[Int(atIntedex)]), with TAG: \(dropMenu.tag)")
         }
+        
+        dropMenuSelected = Int(atIntedex)
     }
+    
+    func getCategoryName(_ index:Int) -> String{
+        return String(describing: dropMenu.items[index])
+    }
+    
     // FIM MENU CATEGORIA
-    
-    
     
     /* 0 -> Despesa
      1 -> Receita */
@@ -75,10 +83,77 @@ class NewItemViewController: UIViewController, KPDropMenuDelegate {
     @IBOutlet weak var whenLabel: UILabel!
     @IBOutlet weak var replayNumberLabel: UILabel!
     
-
+    
     @IBAction func savePressed(_ sender: Any) {
+        let newItem = CKRecord(recordType: "Item")
+        
+        //Adding type
+        if(typeSegmentedControl.selectedSegmentIndex == 0){
+            newItem.setObject("Despesa" as CKRecordValue?, forKey: "itemsType")
+        } else {
+            newItem.setObject("Receita" as CKRecordValue?, forKey: "itemsType")
+        }
+        
+        //Adding value
+        if let value = valueTextField.text {
+            newItem.setObject(Double(value) as CKRecordValue?, forKey: "value")
+        }
+        
+        //Adding description
+        if let description = descriptionTextField.text {
+            newItem.setObject(description as CKRecordValue?, forKey: "description")
+        }
+        
+        //Adding payment type
+        if(paymentSegmentedControl.selectedSegmentIndex == 0){
+            newItem.setObject("Dinheiro" as CKRecordValue?, forKey: "paymentType")
+        } else if(paymentSegmentedControl.selectedSegmentIndex == 1){
+            newItem.setObject("Crédito" as CKRecordValue?, forKey: "paymentType")
+        } else {
+            newItem.setObject("Débito" as CKRecordValue?, forKey: "paymentType")
+        }
+        
+        //Adding category
+        if(dropMenuSelected != -1){
+            newItem.setObject(getCategoryName(dropMenuSelected) as CKRecordValue?, forKey: "categoryType")
+        } else {
+            newItem.setObject("Sem categoria" as CKRecordValue?, forKey: "categoryType")
+        }
+        
+        //Adding input date
+        let formatDate:Date = datePicker.date
+        newItem.setObject(formatDate as CKRecordValue?, forKey: "occurrenceDate")
+        
+        //Adding frequency
+        if(whenSegmentedControl.selectedSegmentIndex == 0){
+            newItem.setObject("Semanalmente" as CKRecordValue?, forKey: "frequencyType")
+        } else if(whenSegmentedControl.selectedSegmentIndex == 1){
+            newItem.setObject("Mensalmente" as CKRecordValue?, forKey: "frequencyType")
+        }
+        
+        if(replaySwitch.isOn){
+            newItem.setObject(1 as CKRecordValue?, forKey: "ifRepeats")
+        } else {
+            newItem.setObject(0 as CKRecordValue?, forKey: "ifRepeats")
+        }
+        
+        if let replayNumber = replayNumberSegmentedControl.text{
+            newItem.setObject(Int(replayNumber) as CKRecordValue?, forKey: "replayNumber")
+        }
+        
+        //Uploading to CloudKit
+        let publicData = CKContainer.default().publicCloudDatabase
+        publicData.save(newItem, completionHandler: {(record:CKRecord?, error:Error?) -> Void in
+            if error != nil{
+                //print("Error --->" + (error!.localizedDescription))
+            }
+        })
+        
+        self.dismiss(animated: true, completion: nil)
+        
+        
         /* segmentedControl
-            para pegar o indice dos SegmentedControls, usar o metodo selectedSegmentIndex */
+         para pegar o indice dos SegmentedControls, usar o metodo selectedSegmentIndex */
         
         /* datePicker data crua */
         //print(datePicker.date)

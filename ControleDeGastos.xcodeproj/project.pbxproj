@@ -19,6 +19,7 @@
 		B1A042DC1E8BF58F00E7BF27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1A042DA1E8BF58F00E7BF27 /* LaunchScreen.storyboard */; };
 		B1A042EE1E8C049600E7BF27 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A042ED1E8C049600E7BF27 /* ItemCell.swift */; };
 		B1A042F01E8C04A400E7BF27 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A042EF1E8C04A400E7BF27 /* Item.swift */; };
+		B7FDF8A61E92A044006C262E /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7FDF8A51E92A044006C262E /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,8 @@
 		B1A042DD1E8BF58F00E7BF27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1A042ED1E8C049600E7BF27 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		B1A042EF1E8C04A400E7BF27 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		B7FDF8A41E92A035006C262E /* ControleDeGastos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ControleDeGastos.entitlements; sourceTree = "<group>"; };
+		B7FDF8A51E92A044006C262E /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +51,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD922B50E0F5A2FE8B9EB08D /* Pods_ControleDeGastos.framework in Frameworks */,
+				B7FDF8A61E92A044006C262E /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +61,7 @@
 		069BEB79DA2615E8CE3ACA1B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B7FDF8A51E92A044006C262E /* CloudKit.framework */,
 				A2D09BAEC67FBF313537F722 /* Pods_ControleDeGastos.framework */,
 			);
 			name = Frameworks;
@@ -139,6 +144,7 @@
 		B1A042CE1E8BF58F00E7BF27 /* ControleDeGastos */ = {
 			isa = PBXGroup;
 			children = (
+				B7FDF8A41E92A035006C262E /* ControleDeGastos.entitlements */,
 				7605562E1E8EBF8F00F7EC00 /* SupportingFiles */,
 				7605562D1E8EBF7D00F7EC00 /* Resources */,
 				7605562C1E8EBF6000F7EC00 /* Items */,
@@ -193,9 +199,17 @@
 				TargetAttributes = {
 					B1A042CB1E8BF58F00E7BF27 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 32P3VH37WD;
+						DevelopmentTeam = GJ5VL7QF9C;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -413,10 +427,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 32P3VH37WD;
+				CODE_SIGN_ENTITLEMENTS = ControleDeGastos/ControleDeGastos.entitlements;
+				DEVELOPMENT_TEAM = GJ5VL7QF9C;
 				INFOPLIST_FILE = ControleDeGastos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = br.org.eldorado.bepid.ControleDeGastos;
+				PRODUCT_BUNDLE_IDENTIFIER = ControleDeGastos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ControleDeGastos/ControleDeGastos-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -430,10 +445,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 32P3VH37WD;
+				CODE_SIGN_ENTITLEMENTS = ControleDeGastos/ControleDeGastos.entitlements;
+				DEVELOPMENT_TEAM = GJ5VL7QF9C;
 				INFOPLIST_FILE = ControleDeGastos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = br.org.eldorado.bepid.ControleDeGastos;
+				PRODUCT_BUNDLE_IDENTIFIER = ControleDeGastos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ControleDeGastos/ControleDeGastos-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
