@@ -35,6 +35,9 @@ class FirstViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    /// Creates all slices in pie chart, each one with a color
+    ///
+    /// - Returns: array of slices in pie chart
     fileprivate func createModels() -> [PieSliceModel] {
         /* get information of categories in database to make a pie chart */
         let quantity:[Double] = [20, 10, 5, 2]
@@ -48,6 +51,9 @@ class FirstViewController: UIViewController {
         return modelsArray
     }
     
+    /// View to labels of categories
+    ///
+    /// - Returns: view that contains labels of categories
     fileprivate func createCustomViewsLayer() -> PieCustomViewsLayer {
         let viewLayer = PieCustomViewsLayer()
         
@@ -61,6 +67,9 @@ class FirstViewController: UIViewController {
         return viewLayer
     }
     
+    /// Creates labels of percentage and puts into each piece of pie chart
+    ///
+    /// - Returns: labels of percentage
     fileprivate func createTextLayer() -> PiePlainTextLayer {
         let textLayerSettings = PiePlainTextLayerSettings()
         textLayerSettings.viewRadius = 75
@@ -75,28 +84,33 @@ class FirstViewController: UIViewController {
         
         let textLayer = PiePlainTextLayer()
         textLayer.settings = textLayerSettings
+        
         return textLayer
     }
     
+    /// Creates labels of categories and puts into each piece of pie chart
+    ///
+    /// - Returns: labels of categories
     fileprivate func createViewGenerator() -> (PieSlice, CGPoint) -> UIView {
         return {slice, center in
+            /* get information of categories in database to make a pie chart */
             let categories:[String] = ["Alimentação", "Vestuário", "Lazer", "Fármacia"]
             
             let container = UIView()
-            container.frame.size = CGSize(width: 800, height: 800)
+            container.frame.size = CGSize(width: 240, height: 240)
             container.center = center
             let view = UIImageView()
-            view.frame = CGRect(x: 0, y: 0, width: 800, height: 800)
+            view.frame = CGRect(x: 0, y: 0, width: 240, height: 240)
             container.addSubview(view)
             
             let specialTextLabel = UILabel()
             specialTextLabel.textAlignment = .center
             specialTextLabel.text = categories[slice.data.id]
             specialTextLabel.sizeToFit()
-            specialTextLabel.frame = CGRect(x: 15, y: 0, width: 800, height: 800)
+            specialTextLabel.frame = CGRect(x: 15, y: 0, width: 240, height: 240)
             
             container.addSubview(specialTextLabel)
-            container.frame.size = CGSize(width: 800, height: 800)
+            container.frame.size = CGSize(width: 240, height: 240)
             
             return container
         }
