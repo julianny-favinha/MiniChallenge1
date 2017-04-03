@@ -10,14 +10,14 @@ import UIKit
 import PieCharts
 
 class FirstViewController: UIViewController {
-
+    
     @IBOutlet weak var expenseImageView: UIImageView!
     @IBOutlet weak var incomeImageView: UIImageView!
     @IBOutlet weak var pieChart: PieChart!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         let line:UIView = UIView(frame: CGRect(x: 15, y: 285, width: 345, height: 1))
         line.backgroundColor = UIColor.lightGray
         self.view.addSubview(line)
@@ -26,7 +26,8 @@ class FirstViewController: UIViewController {
         self.expenseImageView.image = UIImage(named: "wallet.png")
         
         self.view.addSubview(pieChart)
-        pieChart.layers = [/*createCustomViewsLayer(),*/ createTextLayer()]
+        pieChart.layers = [createCustomViewsLayer(), createTextLayer()]
+        //pieChart.delegate = self
         pieChart.models = createModels()
     }
     
@@ -36,12 +37,11 @@ class FirstViewController: UIViewController {
     
     fileprivate func createModels() -> [PieSliceModel] {
         /* get information of categories in database to make a pie chart */
-        let categories:[String] = ["Alimentação", "Vestuário", "Lazer", "Farmácia"]
         let quantity:[Double] = [20, 10, 5, 2]
         let colors:[UIColor] = [UIColor(red:0.86, green:0.86, blue:0.86, alpha:1.0), UIColor(red:0.91, green:0.33, blue:0.33, alpha:1.0), UIColor(red:0.33, green:0.46, blue:0.91, alpha:1.0), UIColor(red:0.92, green:0.89, blue:0.47, alpha:1.0)]
         var modelsArray:[PieSliceModel] = []
         
-        for i in 0..<categories.count {
+        for i in 0..<quantity.count {
             modelsArray.append(PieSliceModel(value: quantity[i], color: colors[i]))
         }
         
@@ -50,12 +50,12 @@ class FirstViewController: UIViewController {
     
     fileprivate func createCustomViewsLayer() -> PieCustomViewsLayer {
         let viewLayer = PieCustomViewsLayer()
+        
         let settings = PieCustomViewsLayerSettings()
-        
-        settings.viewRadius = 135
+        settings.viewRadius = 130
         settings.hideOnOverflow = false
-        
         viewLayer.settings = settings
+        
         viewLayer.viewGenerator = createViewGenerator()
         
         return viewLayer
@@ -80,45 +80,23 @@ class FirstViewController: UIViewController {
     
     fileprivate func createViewGenerator() -> (PieSlice, CGPoint) -> UIView {
         return {slice, center in
+            let categories:[String] = ["Alimentação", "Vestuário", "Lazer", "Fármacia"]
             
             let container = UIView()
-            container.frame.size = CGSize(width: 100, height: 40)
+            container.frame.size = CGSize(width: 800, height: 800)
             container.center = center
             let view = UIImageView()
-            view.frame = CGRect(x: 30, y: 0, width: 40, height: 40)
+            view.frame = CGRect(x: 0, y: 0, width: 800, height: 800)
             container.addSubview(view)
             
-            if slice.data.id == 3 || slice.data.id == 0 {
-                let specialTextLabel = UILabel()
-                specialTextLabel.textAlignment = .center
-                if slice.data.id == 0 {
-                    specialTextLabel.text = "views"
-                    specialTextLabel.font = UIFont.boldSystemFont(ofSize: 18)
-                } else if slice.data.id == 3 {
-                    specialTextLabel.textColor = UIColor.blue
-                    specialTextLabel.text = "Custom"
-                }
-                specialTextLabel.sizeToFit()
-                specialTextLabel.frame = CGRect(x: 0, y: 40, width: 100, height: 20)
-                container.addSubview(specialTextLabel)
-                container.frame.size = CGSize(width: 100, height: 60)
-            }
+            let specialTextLabel = UILabel()
+            specialTextLabel.textAlignment = .center
+            specialTextLabel.text = categories[slice.data.id]
+            specialTextLabel.sizeToFit()
+            specialTextLabel.frame = CGRect(x: 15, y: 0, width: 800, height: 800)
             
-            
-            /* src of images: www.freepik.com, http://www.flaticon.com/authors/madebyoliver
-            let imageName: String? = {
-                switch slice.data.id {
-                case 0: return "fish"
-                case 1: return "grapes"
-                case 2: return "doughnut"
-                case 3: return "water"
-                case 4: return "chicken"
-                case 5: return "beet"
-                case 6: return "cheese"
-                default: return nil
-                }
-            }()
-            view.image = imageName.flatMap{UIImage(named: $0)}*/
+            container.addSubview(specialTextLabel)
+            container.frame.size = CGSize(width: 800, height: 800)
             
             return container
         }
