@@ -11,6 +11,8 @@ import CloudKit
 
 class NewItemViewController: UIViewController, KPDropMenuDelegate {
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     // INICIO MENU CATEGORIA
     @IBOutlet weak var dropMenu: KPDropMenu!
     var dropMenuSelected:Int = -1
@@ -18,23 +20,22 @@ class NewItemViewController: UIViewController, KPDropMenuDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        scrollView.contentSize.height = 1000
+     
         dropMenu.title = "Selecione"
         dropMenu.items = ["Alimentação", "Vestuário", "Lazer", "Fármacia"]
         dropMenu.itemsIDs = ["0", "1", "2", "3"]
         dropMenu.itemsFont = UIFont(name: "Helvetica-Regular", size: 12.0)
         dropMenu.titleTextAlignment = .center
-        dropMenu.delegate = self
         
+        //dropMenu.delegate = self
         
         //Looks for single or multiple taps.
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(NewItemViewController.dismissKeyboard))
-        
+        //let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(NewItemViewController.dismissKeyboard))
         //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
         //tap.cancelsTouchesInView = false
-        
-        view.addGestureRecognizer(tap)
-        
-        self.dismissKeyboard()
+        //view.addGestureRecognizer(tap)
+        //self.dismissKeyboard()
     }
     
     func dismissKeyboard() {
@@ -93,7 +94,7 @@ class NewItemViewController: UIViewController, KPDropMenuDelegate {
     @IBOutlet weak var valueTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextField!
     @IBOutlet weak var saveBarButtonItem: UIBarButtonItem!
-    @IBOutlet weak var replayNumberSegmentedControl: UITextField!
+    @IBOutlet weak var replayNumberTextField: UITextField!
     
     @IBOutlet weak var whenLabel: UILabel!
     @IBOutlet weak var replayNumberLabel: UILabel!
@@ -152,7 +153,7 @@ class NewItemViewController: UIViewController, KPDropMenuDelegate {
             newItem.setObject(0 as CKRecordValue?, forKey: "ifRepeats")
         }
         
-        if let replayNumber = replayNumberSegmentedControl.text{
+        if let replayNumber = replayNumberTextField.text{
             newItem.setObject(Int(replayNumber) as CKRecordValue?, forKey: "replayNumber")
         }
         
@@ -188,6 +189,7 @@ class NewItemViewController: UIViewController, KPDropMenuDelegate {
     
     @IBAction func typeValueChanged(_ sender: UISegmentedControl) {
         if typeSegmentedControl.selectedSegmentIndex == 1 {
+            scrollView.contentSize.height = 700
             paymentLabel.isHidden = true
             paymentSegmentedControl.isHidden = true
             replayLabel.isHidden = true
@@ -195,7 +197,7 @@ class NewItemViewController: UIViewController, KPDropMenuDelegate {
             whenLabel.isHidden = true
             whenSegmentedControl.isHidden = true
             replayNumberLabel.isHidden = true
-            replayNumberSegmentedControl.isHidden = true
+            replayNumberTextField.isHidden = true
         }
         else {
             paymentLabel.isHidden = false
@@ -205,22 +207,26 @@ class NewItemViewController: UIViewController, KPDropMenuDelegate {
             whenLabel.isHidden = false
             whenSegmentedControl.isHidden = false
             replayNumberLabel.isHidden = false
-            replayNumberSegmentedControl.isHidden = false
+            replayNumberTextField.isHidden = false
         }
     }
     
     @IBAction func replayValueChanged(_ sender: UISwitch) {
+        scrollView.contentSize.height = 1300
+        //let cg:CGPoint = CGPoint(x: 0, y: 400)
         if sender.isOn {
+            scrollView.setContentOffset(CGPoint(x: 0 , y: 400), animated: true)
             whenLabel.isHidden = false
             whenSegmentedControl.isHidden = false
             replayNumberLabel.isHidden = false
-            replayNumberSegmentedControl.isHidden = false
+            replayNumberTextField.isHidden = false
         }
         else {
+            scrollView.setContentOffset(CGPoint(x: 0 , y: 0), animated: true)
             whenLabel.isHidden = true
             whenSegmentedControl.isHidden = true
             replayNumberLabel.isHidden = true
-            replayNumberSegmentedControl.isHidden = true
+            replayNumberTextField.isHidden = true
         }
     }
 }
