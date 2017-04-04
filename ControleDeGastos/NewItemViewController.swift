@@ -183,7 +183,6 @@ class NewItemViewController: UIViewController, KPDropMenuDelegate {
         //replaySwitch.isOn -> True if is on, False if not
     }
     
-    
     @IBOutlet weak var paymentLabel: UILabel!
     @IBOutlet weak var replayLabel: UILabel!
     

@@ -40,8 +40,8 @@ class FirstViewController: UIViewController {
     /// - Returns: array of slices in pie chart
     fileprivate func createModels() -> [PieSliceModel] {
         /* get information of categories in database to make a pie chart */
-        let quantity:[Double] = [20, 10, 5, 2]
-        let colors:[UIColor] = [UIColor(red:0.86, green:0.86, blue:0.86, alpha:1.0), UIColor(red:0.91, green:0.33, blue:0.33, alpha:1.0), UIColor(red:0.33, green:0.46, blue:0.91, alpha:1.0), UIColor(red:0.92, green:0.89, blue:0.47, alpha:1.0)]
+        let quantity:[Double] = [20, 10, 5, 12, 24, 7]
+        let colors:[UIColor] = [UIColor(red:0.86, green:0.86, blue:0.86, alpha:1.0), UIColor(red:0.91, green:0.33, blue:0.33, alpha:1.0), UIColor(red:0.33, green:0.46, blue:0.91, alpha:1.0), UIColor(red:0.92, green:0.89, blue:0.47, alpha:1.0), UIColor(red:0.45, green:0.69, blue:0.97, alpha:1.0), UIColor(red:0.5, green:0.5, blue:0.47, alpha:1.0)]
         var modelsArray:[PieSliceModel] = []
         
         for i in 0..<quantity.count {
@@ -77,7 +77,7 @@ class FirstViewController: UIViewController {
         textLayerSettings.label.font = UIFont.systemFont(ofSize: 12)
         
         let formatter = NumberFormatter()
-        formatter.maximumFractionDigits = 1
+        formatter.maximumFractionDigits = 0
         textLayerSettings.label.textGenerator = {slice in
             return formatter.string(from: slice.data.percentage * 100 as NSNumber).map{"\($0)%"} ?? ""
         }
@@ -94,7 +94,7 @@ class FirstViewController: UIViewController {
     fileprivate func createViewGenerator() -> (PieSlice, CGPoint) -> UIView {
         return {slice, center in
             /* get information of categories in database to make a pie chart */
-            let categories:[String] = ["Alimentação", "Vestuário", "Lazer", "Fármacia"]
+            let categories:[String] = ["Alimentação", "Vestuário", "Lazer", "Fármacia", "Bolsa", "Telefonia"]
             
             let container = UIView()
             container.frame.size = CGSize(width: 240, height: 240)
@@ -105,6 +105,7 @@ class FirstViewController: UIViewController {
             
             let specialTextLabel = UILabel()
             specialTextLabel.textAlignment = .center
+            specialTextLabel.font = UIFont.systemFont(ofSize: 12)
             specialTextLabel.text = categories[slice.data.id]
             specialTextLabel.sizeToFit()
             specialTextLabel.frame = CGRect(x: 15, y: 0, width: 240, height: 240)
