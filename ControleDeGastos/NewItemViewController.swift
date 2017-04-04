@@ -27,7 +27,7 @@ class NewItemViewController: UIViewController, KPDropMenuDelegate {
         
         
         //Looks for single or multiple taps.
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(NewItemViewController.dismissKeyboard))
         
         //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
         //tap.cancelsTouchesInView = false
@@ -181,6 +181,33 @@ class NewItemViewController: UIViewController, KPDropMenuDelegate {
         
         /* switch */
         //replaySwitch.isOn -> True if is on, False if not
+    }
+    
+    
+    @IBOutlet weak var paymentLabel: UILabel!
+    @IBOutlet weak var replayLabel: UILabel!
+    
+    @IBAction func typeValueChanged(_ sender: UISegmentedControl) {
+        if typeSegmentedControl.selectedSegmentIndex == 1 {
+            paymentLabel.isHidden = true
+            paymentSegmentedControl.isHidden = true
+            replayLabel.isHidden = true
+            replaySwitch.isHidden = true
+            whenLabel.isHidden = true
+            whenSegmentedControl.isHidden = true
+            replayNumberLabel.isHidden = true
+            replayNumberSegmentedControl.isHidden = true
+        }
+        else {
+            paymentLabel.isHidden = false
+            paymentSegmentedControl.isHidden = false
+            replayLabel.isHidden = false
+            replaySwitch.isHidden = false
+            whenLabel.isHidden = false
+            whenSegmentedControl.isHidden = false
+            replayNumberLabel.isHidden = false
+            replayNumberSegmentedControl.isHidden = false
+        }
     }
     
     @IBAction func replayValueChanged(_ sender: UISwitch) {
