@@ -31,11 +31,11 @@ class NewItemViewController: UIViewController, KPDropMenuDelegate {
         //dropMenu.delegate = self
         
         //Looks for single or multiple taps.
-        //let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(NewItemViewController.dismissKeyboard))
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(NewItemViewController.dismissKeyboard))
         //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
-        //tap.cancelsTouchesInView = false
-        //view.addGestureRecognizer(tap)
-        //self.dismissKeyboard()
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+        self.dismissKeyboard()
     }
     
     func dismissKeyboard() {
