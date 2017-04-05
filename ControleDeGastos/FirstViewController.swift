@@ -15,19 +15,31 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var incomeImageView: UIImageView!
     @IBOutlet weak var pieChart: PieChart!
     
+    fileprivate let colors:[UIColor] = [UIColor(red:0.78, green:0.83, blue:0.65, alpha:1.0), UIColor(red:0.91, green:0.68, blue:0.67, alpha:1.0), UIColor(red:0.89, green:0.87, blue:0.42, alpha:1.0), UIColor(red:0.38, green:0.78, blue:0.88, alpha:1.0), UIColor(red:0.42, green:0.47, blue:0.85, alpha:1.0), UIColor(red:0.92, green:0.68, blue:0.38, alpha:1.0), UIColor(red:0.83, green:0.83, blue:0.83, alpha:1.0), UIColor(red:0.90, green:0.39, blue:0.39, alpha:1.0), UIColor(red:0.42, green:0.90, blue:0.54, alpha:1.0), UIColor(red:0.63, green:0.41, blue:0.77, alpha:1.0), UIColor(red:0.73, green:0.76, blue:1.00, alpha:1.0), UIColor(red:0.61, green:0.80, blue:0.51, alpha:1.0), UIColor(red:1.00, green:0.67, blue:0.54, alpha:1.0), UIColor(red:0.55, green:0.70, blue:0.48, alpha:1.0), UIColor(red:0.44, green:0.46, blue:0.70, alpha:1.0)]
+    
+    fileprivate var categories:[String] = ["Alimentação", "Vestuário", "Lazer", "Frmácia", "Bolsa", "Telefonia"]
+    
+    fileprivate var quantity:[Int] = [20, 10, 5, 12, 24, 7]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // line
         let line:UIView = UIView(frame: CGRect(x: 15, y: 285, width: 345, height: 1))
         line.backgroundColor = UIColor.lightGray
         self.view.addSubview(line)
         
+        // images to "Despesas totais" and "Receitas totais"
         self.incomeImageView.image = UIImage(named: "piggy-bank.png")
         self.expenseImageView.image = UIImage(named: "wallet.png")
         
+        /* ***************************************************************************************************************************************************************************************
+        ****************************************************** TODO: PEGAR INFO DO BANCO E ATUALIZAR OS ARRAYS categories E quantity ****************************************************
+        ****************************************************************************************************************************************************************************************** */
+        
+        // pie chart
         self.view.addSubview(pieChart)
         pieChart.layers = [createCustomViewsLayer(), createTextLayer()]
-        //pieChart.delegate = self
         pieChart.models = createModels()
     }
     
@@ -39,13 +51,10 @@ class FirstViewController: UIViewController {
     ///
     /// - Returns: array of slices in pie chart
     fileprivate func createModels() -> [PieSliceModel] {
-        /* get information of categories in database to make a pie chart */
-        let quantity:[Double] = [20, 10, 5, 12, 24, 7]
-        let colors:[UIColor] = [UIColor(red:0.86, green:0.86, blue:0.86, alpha:1.0), UIColor(red:0.91, green:0.33, blue:0.33, alpha:1.0), UIColor(red:0.33, green:0.46, blue:0.91, alpha:1.0), UIColor(red:0.92, green:0.89, blue:0.47, alpha:1.0), UIColor(red:0.45, green:0.69, blue:0.97, alpha:1.0), UIColor(red:0.5, green:0.5, blue:0.47, alpha:1.0)]
         var modelsArray:[PieSliceModel] = []
         
         for i in 0..<quantity.count {
-            modelsArray.append(PieSliceModel(value: quantity[i], color: colors[i]))
+            modelsArray.append(PieSliceModel(value: Double(quantity[i]), color: self.colors[i]))
         }
         
         return modelsArray
@@ -93,9 +102,6 @@ class FirstViewController: UIViewController {
     /// - Returns: labels of categories
     fileprivate func createViewGenerator() -> (PieSlice, CGPoint) -> UIView {
         return {slice, center in
-            /* get information of categories in database to make a pie chart */
-            let categories:[String] = ["Alimentação", "Vestuário", "Lazer", "Fármacia", "Bolsa", "Telefonia"]
-            
             let container = UIView()
             container.frame.size = CGSize(width: 240, height: 240)
             container.center = center
@@ -106,9 +112,9 @@ class FirstViewController: UIViewController {
             let specialTextLabel = UILabel()
             specialTextLabel.textAlignment = .center
             specialTextLabel.font = UIFont.systemFont(ofSize: 12)
-            specialTextLabel.text = categories[slice.data.id]
+            specialTextLabel.text = self.categories[slice.data.id]
             specialTextLabel.sizeToFit()
-            specialTextLabel.frame = CGRect(x: 15, y: 0, width: 240, height: 240)
+            specialTextLabel.frame = CGRect(x: 0, y: -3, width: 240, height: 240)
             
             container.addSubview(specialTextLabel)
             container.frame.size = CGSize(width: 240, height: 240)
