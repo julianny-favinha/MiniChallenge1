@@ -193,6 +193,7 @@ class NewItemViewController: UIViewController, KPDropMenuDelegate {
             paymentLabel.isHidden = true
             paymentSegmentedControl.isHidden = true
             replayLabel.isHidden = true
+            replaySwitch.isOn = false // return default value
             replaySwitch.isHidden = true
             whenLabel.isHidden = true
             whenSegmentedControl.isHidden = true
@@ -204,10 +205,6 @@ class NewItemViewController: UIViewController, KPDropMenuDelegate {
             paymentSegmentedControl.isHidden = false
             replayLabel.isHidden = false
             replaySwitch.isHidden = false
-            whenLabel.isHidden = false
-            whenSegmentedControl.isHidden = false
-            replayNumberLabel.isHidden = false
-            replayNumberTextField.isHidden = false
         }
     }
     
