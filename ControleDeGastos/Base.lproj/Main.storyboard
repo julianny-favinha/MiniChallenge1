@@ -191,7 +191,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="continue"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="continue"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Categoria" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kq5-my-v6a">
                                         <rect key="frame" x="8" y="122" width="82" height="21"/>
@@ -330,7 +330,7 @@
                         <outlet property="saveBarButtonItem" destination="XPV-YX-azL" id="xcj-vl-ZnA"/>
                         <outlet property="scrollView" destination="XfT-ae-cnw" id="2xY-DY-eBn"/>
                         <outlet property="typeSegmentedControl" destination="3js-8U-jG2" id="CzU-oS-2tm"/>
-                        <outlet property="valueTextField" destination="Hug-yF-j6e" id="SgY-Zm-A0X"/>
+                        <outlet property="valueTextField" destination="Hug-yF-j6e" id="WR3-qt-ZNf"/>
                         <outlet property="whenLabel" destination="6QD-Ko-VpK" id="XYF-DK-Vhp"/>
                         <outlet property="whenSegmentedControl" destination="Ebp-xN-DGb" id="XYd-rc-Yed"/>
                     </connections>

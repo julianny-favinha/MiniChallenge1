@@ -215,7 +215,7 @@ class NewItemViewController: UIViewController, KPDropMenuDelegate {
         scrollView.contentSize.height = 1300
         //let cg:CGPoint = CGPoint(x: 0, y: 400)
         if sender.isOn {
-            scrollView.setContentOffset(CGPoint(x: 0 , y: 400), animated: true)
+            //scrollView.setContentOffset(CGPoint(x: 0 , y: 400), animated: true)
             whenLabel.isHidden = false
             whenSegmentedControl.isHidden = false
             replayNumberLabel.isHidden = false
