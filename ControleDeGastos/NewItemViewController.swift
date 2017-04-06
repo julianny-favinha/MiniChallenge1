@@ -23,8 +23,8 @@ class NewItemViewController: UIViewController, KPDropMenuDelegate {
         scrollView.contentSize.height = 1000
      
         dropMenu.title = "Selecione"
-        dropMenu.items = ["Alimentação", "Vestuário", "Lazer", "Fármacia"]
-        dropMenu.itemsIDs = ["0", "1", "2", "3"]
+        dropMenu.items = ["Sem categoria", "Alimentação", "Aluguel", "Farmácia", "Lazer", "Salário", "Saúde", "Telefonia", "Transporte", "Vestuário"]
+        dropMenu.itemsIDs = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
         dropMenu.itemsFont = UIFont(name: "Helvetica-Regular", size: 12.0)
         dropMenu.titleTextAlignment = .center
         

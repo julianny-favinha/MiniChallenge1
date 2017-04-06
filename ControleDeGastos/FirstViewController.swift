@@ -17,9 +17,9 @@ class FirstViewController: UIViewController {
     
     fileprivate let colors:[UIColor] = [UIColor(red:0.78, green:0.83, blue:0.65, alpha:1.0), UIColor(red:0.91, green:0.68, blue:0.67, alpha:1.0), UIColor(red:0.89, green:0.87, blue:0.42, alpha:1.0), UIColor(red:0.38, green:0.78, blue:0.88, alpha:1.0), UIColor(red:0.42, green:0.47, blue:0.85, alpha:1.0), UIColor(red:0.92, green:0.68, blue:0.38, alpha:1.0), UIColor(red:0.83, green:0.83, blue:0.83, alpha:1.0), UIColor(red:0.90, green:0.39, blue:0.39, alpha:1.0), UIColor(red:0.42, green:0.90, blue:0.54, alpha:1.0), UIColor(red:0.63, green:0.41, blue:0.77, alpha:1.0), UIColor(red:0.73, green:0.76, blue:1.00, alpha:1.0), UIColor(red:0.61, green:0.80, blue:0.51, alpha:1.0), UIColor(red:1.00, green:0.67, blue:0.54, alpha:1.0), UIColor(red:0.55, green:0.70, blue:0.48, alpha:1.0), UIColor(red:0.44, green:0.46, blue:0.70, alpha:1.0)]
     
-    fileprivate var categories:[String] = ["Alimentação", "Vestuário", "Lazer", "Frmácia", "Bolsa", "Telefonia"]
+    fileprivate var categories:[String] = ["Sem categoria", "Alimentação", "Aluguel", "Farmácia", "Lazer", "Salário", "Saúde", "Telefonia", "Transporte", "Vestuário"]
     
-    fileprivate var quantity:[Int] = [20, 10, 5, 12, 24, 7]
+    fileprivate var quantity:[Int] = [20, 10, 5, 12, 24, 7, 15, 18, 17, 20]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,7 +83,7 @@ class FirstViewController: UIViewController {
         let textLayerSettings = PiePlainTextLayerSettings()
         textLayerSettings.viewRadius = 75
         textLayerSettings.hideOnOverflow = true
-        textLayerSettings.label.font = UIFont.systemFont(ofSize: 12)
+        textLayerSettings.label.font = UIFont.systemFont(ofSize: 10)
         
         let formatter = NumberFormatter()
         formatter.maximumFractionDigits = 0
