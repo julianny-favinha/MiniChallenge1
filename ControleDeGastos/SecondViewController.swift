@@ -15,7 +15,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var categoryIcon: UIImageView!
-    var items:[Item] = [Item(type: "Despesa", value: 20.0, category: "Alimentação", description: "Bandeco", payment: "Dinheiro", date: "31/03/2017", replay: "Sim", when: "Mensalmente", replayNumber: 4)]
+    var items:[Item] = [Item(type: "Despesa", value: 20.0, category: "Alimentação", description: "Bandeco", payment: "Dinheiro", date: Date(), ifRepeats: 1, when: "Mensalmente", replayNumber: 4)]
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +50,12 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func formatDate(_ date:Date) -> String{
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/yyyy"
+        return formatter.string(from: date)
+    }
 
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (items.count)
@@ -61,7 +67,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         cell.descriptionLabel.text = item.description
         cell.valueLabel.text = String("R$\(item.value)")
-        cell.dateLabel.text = item.date
+        cell.dateLabel.text = formatDate(item.date)
         cell.paymentLabel.text = item.payment
         
         return cell
