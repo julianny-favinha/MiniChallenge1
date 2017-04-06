@@ -13,9 +13,9 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var tableView: UITableView!
-    
     @IBOutlet weak var categoryIcon: UIImageView!
-    var items:[Item] = [Item(type: "Despesa", value: 20.0, category: "Alimentação", description: "Bandeco", payment: "Dinheiro", date: Date(), ifRepeats: 1, when: "Mensalmente", replayNumber: 4)]
+    
+    var items:[Item] = [Item(type: "Despesa", value: 20.0, category: "Alimentacao", description: "Bandeco", payment: "Dinheiro", date: Date(), ifRepeats: 1, when: "Mensalmente", replayNumber: 4)]
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,6 +69,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         cell.valueLabel.text = String("R$\(item.value)")
         cell.dateLabel.text = formatDate(item.date)
         cell.paymentLabel.text = item.payment
+        cell.categoryImageView.image = UIImage(named:"\(item.category)")
         
         return cell
     }
