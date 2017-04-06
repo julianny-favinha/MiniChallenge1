@@ -19,7 +19,7 @@ class FirstViewController: UIViewController {
     
     fileprivate var categories:[String] = ["Sem categoria", "Alimentação", "Aluguel", "Farmácia", "Lazer", "Salário", "Saúde", "Telefonia", "Transporte", "Vestuário"]
     
-    fileprivate var quantity:[Int] = [20, 10, 5, 12, 24, 7, 15, 18, 17, 20]
+    fileprivate var quantity:[Int] = [20, 10, 15, 12, 24, 13, 15, 18, 17, 20]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,7 +83,7 @@ class FirstViewController: UIViewController {
         let textLayerSettings = PiePlainTextLayerSettings()
         textLayerSettings.viewRadius = 75
         textLayerSettings.hideOnOverflow = true
-        textLayerSettings.label.font = UIFont.systemFont(ofSize: 10)
+        textLayerSettings.label.font = UIFont.systemFont(ofSize: 11)
         
         let formatter = NumberFormatter()
         formatter.maximumFractionDigits = 0
